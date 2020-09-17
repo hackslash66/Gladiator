@@ -13,4 +13,50 @@
     </ul>
     </nav>
   
-<p>login works!</p>
+    <div class="float-container">
+
+      <div class="float-child1">
+        <div class="green">
+            <img src="assets/images/reg.jpeg" width="100%">
+        </div>
+      </div>
+      
+      <div class="float-child2">
+          <h3 class="heading">Login here!!</h3>
+        <div class="blue">
+          <form (ngSubmit)="loginPerson()" #addForm="ngForm">
+              
+              <div class="form-group">
+                  <label for="uname"><b>Username</b></label>
+                  <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
+                  required pattern="[A-Z][a-z]{3,}"  #uname='ngModel'>
+                  <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
+                     Username is invalid!
+                </span>
+              </div>
+             
+              
+              
+              <div class="form-group">
+                  <label for="psw"><b>Password</b></label>
+                <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
+                <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
+                  Password is invalid!
+                </span>
+              </div>
+              
+              
+              
+              <button class="btn btn-success sub" type="submit" [disabled]="!addForm.valid">Submit</button>
+          </form>
+        </div>
+        <p class="change_link">  
+          New User ?
+          <a routerLink="/register" class="to-register"> Register Here</a>
+      </p>
+      </div>
+      
+      
+        
+    </div>

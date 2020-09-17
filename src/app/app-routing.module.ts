@@ -5,13 +5,14 @@ import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { RegisterComponent } from './register/register.component';
-
+import {AdminpanelComponent} from './adminpanel/adminpanel.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'productlist',component:ProductlistComponent},
   {path:'index',component:IndexComponent},
+  {path:'adminpanel',component:AdminpanelComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];

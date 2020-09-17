@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
+import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IndexComponent } from './index/index.component';
     LoginComponent,
     DashboardComponent,
     ProductlistComponent,
-    IndexComponent
+    IndexComponent,
+    AdminpanelComponent
   ],
   imports: [
     BrowserModule,
