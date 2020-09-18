@@ -1,0 +1,33 @@
+.details {
+    position: relative;
+  }
+  
+  .details span {
+    position: absolute;
+    top: 0;
+    //transform: translateY(70%);  
+    display: none;
+    background: white;
+    z-index: 20;
+    min-width: 100%;
+    
+    padding: 1rem;
+    border: 1px solid black;
+  }
+  
+  .details:hover span {
+    display: inline;
+  }
+  
+  td {
+    padding: 1rem;
+    background: whitesmoke;
+    border: 1px solid black;
+  }
+  table{
+         width: 100%;
+  }
+  .innertable td{
+      border-style: none;
+  }
+
