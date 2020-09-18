@@ -39,7 +39,7 @@
               
               <div class="form-group">
                   <label for="psw"><b>Password</b></label>
-                <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                <input  class='form-control' type="password" placeholder="min8char@6" name="psw" [(ngModel)]='register.password'
                 required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
                 <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
                   Password is invalid!
