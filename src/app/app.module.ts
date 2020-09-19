@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     DashboardComponent,
     ProductlistComponent,
     IndexComponent,
-    AdminpanelComponent
+    AdminpanelComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

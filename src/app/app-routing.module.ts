@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { RegisterComponent } from './register/register.component';
 import {AdminpanelComponent} from './adminpanel/adminpanel.component';
+import {AdminComponent} from './admin/admin.component';
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -13,6 +15,7 @@ const routes: Routes = [
   {path:'productlist',component:ProductlistComponent},
   {path:'index',component:IndexComponent},
   {path:'adminpanel',component:AdminpanelComponent},
+  {path:'admin',component:AdminComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];
