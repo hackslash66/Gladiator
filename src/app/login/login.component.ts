@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
 loginPerson(){
   var uname=this.register.uname;
   var pass=this.register.password;
-  if(uname=="Admin" && pass=="Admin@123"){
+  if(uname=="admin" && pass=="Admin@123"){
     this.router.navigate(['adminpanel']);
   }
   else{
