@@ -17,38 +17,33 @@
 
       <div class="float-child1">
         <div class="green">
-            <img src="assets/images/reg.jpeg" width="100%" height="615px">
+            <img src="assets/images/reg.jpeg" width="100%">
         </div>
       </div>
       
       <div class="float-child2">
           <h3 class="heading">Login here!!</h3>
         <div class="blue">
-          <form (ngSubmit)="loginPerson()" #addForm="ngForm">
+          <form (ngSubmit)="loginPerson()" >
               
               <div class="form-group">
                   <label for="uname"><b>Username</b></label>
-                  <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
-                  required pattern="[a-z]{3,}"  #uname='ngModel'>
-                  <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
+                  <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]=uname
+                 >
                      Username is invalid!
-                </span>
               </div>
              
               
               
               <div class="form-group">
                   <label for="psw"><b>Password</b></label>
-                <input  class='form-control' type="password" placeholder="min8char@6" name="psw" [(ngModel)]='register.password'
-                required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
-                <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
+                <input  class='form-control' type="password" placeholder="min8char@6" name="psw" [(ngModel)]=psw >
                   Password is invalid!
-                </span>
               </div>
               
               
               
-              <button class="btn btn-success sub" type="submit" [disabled]="!addForm.valid">Submit</button>
+              <button class="btn btn-success sub" type="submit">Submit</button>
           </form>
         </div>
         <p class="change_link">  
@@ -60,4 +55,3 @@
       
         
     </div>
-    

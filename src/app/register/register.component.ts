@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {Register} from '../register.model';
+import {RegisterModel} from '../register.model';
+import {UserService} from '../service/user.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
- register=new Register;
+ register=new RegisterModel;
  
  banks:string[];
-   constructor(private router:Router) { 
+   constructor(private service: UserService, private router: Router) { 
     this.banks=['HDFC','Kotak','ICICI','SBI'];
    }
 
@@ -18,6 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 savePerson(){
   alert('Registered Successfully');
+  this.service.saveUser(this.register);
   this.router.navigate(['login']);
 }
 }

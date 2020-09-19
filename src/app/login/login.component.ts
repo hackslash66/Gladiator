@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Register } from '../register.model';
+import { RegisterModel } from '../register.model';
+import {UserService} from '../service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +9,19 @@ import { Register } from '../register.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  register=new Register;
-  constructor(private router:Router) { }
+  user=new RegisterModel;
+  uname:String;
+  psw:String;
+  constructor(private service: UserService,private router:Router) { }
 
   ngOnInit(): void {
   }
 loginPerson(){
-  var uname=this.register.uname;
-  var pass=this.register.password;
-  if(uname=="admin" && pass=="Admin@123"){
+  if(this.uname=="Admin" && this.psw=="Admin@123"){
     this.router.navigate(['adminpanel']);
   }
   else{
+    this.service.setUser(this.uname,this.psw);
     this.router.navigate(['dashboard']);
   }
 }

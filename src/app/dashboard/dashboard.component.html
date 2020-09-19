@@ -1,23 +1,53 @@
-<div class="bcgd">
-    <div class="dashboard">
+
+
+<div class="head">
+<div  style="float: right;">
+    HI {{user.uname}}
+</div>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      
+    </ul>
+</nav>
+
+<div>
+<div class="bcgd" class="container">
+    <div class="vertical-menu " style=" margin-top: 3%;">
+        <a href="#" class="active">Account</a>
+        <a href="#">Edit Profile</a>
+        <a href="#">Change Password</a>
+      </div>
+    
+    <div class="dashboard" >
         <div class="title"><p>Dashboard</p></div>
         <div class="card">
             <table>
                 <tr>
                     <td>Card Number:</td>
-                    <td class="values"> 123456</td>
+                    <td class="values">aksharajnvu</td>
                 </tr>
                 <tr>
                     <td>Name:</td>
-                    <td class="values"> Akshara</td>
+                    <td class="values"> {{user.uname}}</td>
                 </tr>
                 <tr>
                     <td>Valid till:</td>
-                    <td class="values">21/08/25</td>
+                    <td class="values">{{user.date}}</td>
                 </tr>
                 <tr>
                     <td>Card type:</td>
-                    <td class="values">Gold/Titanium</td>
+                    <td class="values">{{user.card}}</td>
                 </tr>
             </table>
             <div class="activated">ACTIVATED</div>
@@ -56,4 +86,5 @@
             </table>
         </div>
     </div>
+</div>
 </div>
