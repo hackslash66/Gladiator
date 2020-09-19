@@ -1,3 +1,4 @@
+    <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
         <li class="nav-item active">
@@ -17,7 +18,7 @@
 
         <div class="float-child1">
           <div class="green">
-              <img src="assets/images/reg.jpeg" width="100%">
+              <img src="assets/images/reg.jpeg" width="100%" height="619.5">
           </div>
         </div>
         
@@ -52,7 +53,7 @@
                 <div class="form-group">
                     <label for="uname"><b>Username</b></label>
                     <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
-                    required pattern="[A-Z][a-z]{3,}"  #uname='ngModel'>
+                    required pattern="[a-z]{3,}"  #uname='ngModel'>
                     <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
                        Username is invalid!
                   </span>
@@ -132,3 +133,9 @@
         
           
       </div>
+      
+      
+        
+        
+      </body>
+     
