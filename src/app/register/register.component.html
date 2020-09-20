@@ -114,7 +114,7 @@
                   </span>
                 </div>
                 <div class="form-group">
-                    <label for="ifsc"><b>Account Number</b></label>
+                    <label for="ifsc"><b>IFSC</b></label>
                   <input  class='form-control' type="text" placeholder="SBIN0021956" name="ifsc" [(ngModel)]='register.ifsc'
                   required pattern="^[A-Z]{4}0[A-Z0-9]{6}$"  #ifsc='ngModel'>
                   <span *ngIf="ifsc.touched && ifsc.invalid" class="alert-danger">
