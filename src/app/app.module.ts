@@ -13,6 +13,7 @@ import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AdminComponent } from './admin/admin.component';
 import { IndexnavbarComponent } from './indexnavbar.component';
+import { AdminacceptanceComponent } from './adminacceptance/adminacceptance.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { IndexnavbarComponent } from './indexnavbar.component';
     IndexComponent,
     AdminpanelComponent,
     AdminComponent,
-    IndexnavbarComponent
+    IndexnavbarComponent,
+    AdminacceptanceComponent
   ],
   imports: [
     BrowserModule,

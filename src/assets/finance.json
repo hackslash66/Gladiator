@@ -1,0 +1,26 @@
+[
+    {
+        "uname":"kohli",
+        "email":"virat34@gmail.com",
+        "phone":"6583768582",
+        "name":"Virat",
+        "dob":"12-05-2000",
+        "address":"kg colony",
+        "card":"Gold",
+        "bank":"HDFC",
+        "account":"7845129632459856",
+        "ifsc":"HGJJ025654"
+    },
+    {
+        "uname":"yashwanth",
+        "email":"yashu34@gmail.com",
+        "phone":"9573768583",
+        "name":"Reddy",
+        "dob":"21-12-1999",
+        "address":"durga colony",
+        "card":"Titanium",
+        "bank":"ICICI",
+        "account":"8956231475458956",
+        "ifsc":"JKLI078452"
+    }
+]
