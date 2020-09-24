@@ -1,71 +1,94 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" routerLink="/dashboard">Dashboard</a>
-      </li>
-      <li class="nav-item" [routerLinkActive]="['active']">
-        <a class="nav-link" routerLink="/productlist">Product List</a>
-      </li>
-      
-    </ul>
-</nav>
 
-<div class="bcgd">
-    <div class="dashboard">
-        <div class="title"><p>Dashboard</p></div>
-        <div class="card">
-            <table>
-                <tr>
-                    <td>Card Number:</td>
-                    <td class="values"> 123456</td>
-                </tr>
-                <tr>
-                    <td>Name:</td>
-                    <td class="values"> Akshara</td>
-                </tr>
-                <tr>
-                    <td>Valid till:</td>
-                    <td class="values">21/08/25</td>
-                </tr>
-                <tr>
-                    <td>Card type:</td>
-                    <td class="values">Gold/Titanium</td>
-                </tr>
-            </table>
-            <div class="activated">ACTIVATED</div>
-        </div>
-
-        <div class="credit_info">
-            <p>Total credit:40,000</p>
-        <p> credit used:</p>
-        <p> remaining credit:</p>
-        </div>
-
-        <div class="products_list">
-            <table>
-                <tr>
-                    <td>Product Name:</td><td>Iphone</td>
-                    <td style="float: right;">Amount:</td><td>70,000</td>
-                </tr>
-                <tr>
-                    <td>Paid:</td><td>15,000</td>
-                </tr>
-                <tr>
-                    <td>Balance:</td><td>55,000</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="transactions">
-            <div class="trans_title">Recent transactions:
+<body >
+    <div class="head">
+    <div  style="float: right;">
+        HI {{user.uname}}
+    </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" routerLink="/productlist">Product List</a>
+          </li>
+          
+        </ul>
+    </nav>
+    
+    <div  class="container">
+    <div class="bcgd panel panel-default">
+        <div class="vertical-menu " >
+            <a href="#" class="active">Account</a>
+            <a href="#">Edit Profile</a>
+            <a href="#">Change Password</a>
+          </div>
+        
+          <div class="dashboard">
+        <div  class="center-container center-border" >
+            <div class="card division">
+                <table>
+                    <tr>
+                        <td>Card Number:</td>
+                        <td class="values">aksharajnvu</td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td class="values"> {{user.uname}}</td>
+                    </tr>
+                    <tr>
+                        <td>Valid till:</td>
+                        <td class="values">{{user.date}}</td>
+                    </tr>
+                    <tr>
+                        <td>Card type:</td>
+                        <td class="values">{{user.card}}</td>
+                    </tr>
+                </table>
+                <div class="activated">ACTIVATED</div>
             </div>
-            <table class="trans_table">
-                <tr>
-                    <th>Product</th>
-                    <th style="margin-left: 5%; padding-left: 10%;">Date</th>
-                    <th class="last_col">Amount Paid</th>
-                </tr>
-            </table>
+    
+            <div class="credit_info division">
+                <div class="header" >Credit details</div>
+                <div class="c_details">
+                <p>Total credit:40,000</p>
+            <p> credit used:</p>
+            <p> remaining credit:</p>
+        </div>
+            </div>
+    
+            <div class="division">
+                <div class="header" >Products purchased</div>
+            
+            <div class="products_list">
+                <table>
+                    <tr >
+                        <td>Product Name:</td><td class="values">Iphone</td>
+                        <td >Amount:</td><td class="values">70,000</td>
+                    </tr>
+                    <tr>
+                        <td>Paid:</td><td class="values">15,000</td>
+                    </tr>
+                    <tr>
+                        <td>Balance:</td><td class="values">55,000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+            <div class="transactions division">
+                <div class="header" >Recent transactions</div>
+                <table class="trans_table">
+                    <tr>
+                        <th>Product</th>
+                        <th style="margin-left: 5%; padding-left: 10%;">Date</th>
+                        <th class="last_col">Amount Paid</th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
+    </body>
