@@ -8,6 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import {AdminpanelComponent} from './adminpanel/adminpanel.component';
 import {AdminComponent} from './admin/admin.component';
 import {AdminacceptanceComponent} from './adminacceptance/adminacceptance.component'
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'adminpanel',component:AdminpanelComponent},
   {path:'admin',component:AdminComponent},
   {path:'adminaccept',component:AdminacceptanceComponent},
+  {path:'aboutus',component:AboutusComponent},
+  {path:'contactus',component:ContactusComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];

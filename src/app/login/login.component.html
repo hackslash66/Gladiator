@@ -1,4 +1,81 @@
-<app-indexnavbar></app-indexnavbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <title>Sign Up Form by Colorlib</title> -->
+
+    <!-- Font Icon 
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">-->
+
+    <!-- Main css -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+  <app-indexnavbar></app-indexnavbar>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" (ngSubmit)="loginPerson()" #addForm="ngForm">
+                        <h2 class="form-title">Login Here!!</h2>
+                        
+                       
+                    
+                   
+                    <div class="form-group">
+                        <label for="uname"><b>Username</b></label>
+                        <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
+                        required pattern="[a-z]{3,}"  #uname='ngModel'>
+                        <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
+                           Username is invalid!
+                      </span>
+                    </div>
+                   
+                    
+                    
+                    <div class="form-group">
+                        <label for="psw"><b>Password</b></label>
+                      <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                      required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
+                      <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
+                        Password is invalid!
+                      </span>
+                    </div>
+                   
+                    
+
+
+                        
+                       
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" [disabled]="!addForm.valid" class="form-submit" value="Login"/>
+                        </div>
+                        
+                    </form>
+                    <p class="loginhere">
+                        New User  ? <a routerLink="/register" class="to-register"> Regiter Here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+
+
+
+<!-- <app-indexnavbar></app-indexnavbar>
 
     <div class="float-container">
 
@@ -45,6 +122,5 @@
       </div>
       
       
-        
     </div>
-    
+     -->
