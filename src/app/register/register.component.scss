@@ -89,7 +89,9 @@ body {
   -o-background-size: cover;
   -ms-background-size: cover;
   background-position: center center;
-  padding: 0px 0; }
+  padding: 0px 0;
+  background-attachment: fixed;
+ }
 
 .container {
   width: 660px;
