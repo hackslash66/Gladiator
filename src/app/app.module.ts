@@ -16,6 +16,7 @@ import { IndexnavbarComponent } from './indexnavbar.component';
 import { AdminacceptanceComponent } from './adminacceptance/adminacceptance.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ProductinfoComponent } from './productinfo/productinfo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ContactusComponent } from './contactus/contactus.component';
     IndexnavbarComponent,
     AdminacceptanceComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    ProductinfoComponent
   ],
   imports: [
     BrowserModule,
