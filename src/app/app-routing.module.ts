@@ -10,6 +10,7 @@ import {AdminComponent} from './admin/admin.component';
 import {AdminacceptanceComponent} from './adminacceptance/adminacceptance.component'
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ProductinfoComponent } from './productinfo/productinfo.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'adminaccept',component:AdminacceptanceComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'contactus',component:ContactusComponent},
+  {path:'productinfo',component:ProductinfoComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];
