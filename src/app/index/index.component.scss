@@ -35,7 +35,9 @@ body{
    box-shadow: 0 0 5px 0 #e9e8ca;
       padding:2%;
 }
-
+.prod{
+   margin-left: 80px;
+}
 .carousel-inner img{
    width: 250px;
    height: 250px;
@@ -57,14 +59,14 @@ a {
    
    &:nth-of-type(1) {
       height: 400px;
-      margin-top: 55px;
+      margin-top: 90px;
      top:0; bottom:0; left:0;
      background: linear-gradient(-90deg, rgba(255, 218, 158, 0) 0%, rgb(255, 222, 179) 100%);
    }
    &:nth-of-type(2) {
       height: 400px;
 
-      margin-top: 55px;
+      margin-top: 90px;
      top:0; bottom:0; right: 0;
      background: linear-gradient(90deg, rgba(255, 218, 158, 0) 0%, rgb(255, 222, 179) 100%);
    }
