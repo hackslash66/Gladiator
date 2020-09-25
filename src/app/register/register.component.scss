@@ -81,7 +81,7 @@ body {
   color: #222;
   //font-weight: 400;
   //font-family: 'Montserrat';
-  background-image: url("https://prmceam.ac.in/wp-content/uploads/2015/03/background-learner1.jpg");
+  background-image: url('/assets/images/login.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   -moz-background-size: cover;
@@ -161,15 +161,18 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   font-weight: 500;
-  color: #222; }
+  color: rgb(202, 202, 202); }
+  .form-input::input-placeholder{
+    color:black;
+  }
   .form-input::-webkit-input-placeholder {
-    color: #999; }
+    color: rgb(214, 213, 213); }
   .form-input::-moz-placeholder {
-    color: #999; }
+    color: rgb(214, 213, 213); }
   .form-input:-ms-input-placeholder {
-    color: #999; }
+    color: rgb(214, 213, 213); }
   .form-input:-moz-placeholder {
-    color: #999; }
+    color: rgb(214, 213, 213); }
   .form-input::-webkit-input-placeholder {
     font-weight: 500; }
   .form-input::-moz-placeholder {
@@ -217,11 +220,11 @@ body {
   color: #fff;
   text-transform: uppercase;
   border: none;
-  background-image: -moz-linear-gradient(to left, #74ebd5, #9face6);
-  background-image: -ms-linear-gradient(to left, #74ebd5, #9face6);
-  background-image: -o-linear-gradient(to left, #74ebd5, #9face6);
-  background-image: -webkit-linear-gradient(to left, #74ebd5, #9face6);
-  background-image: linear-gradient(to left, #74ebd5, #9face6); }
+  background-image: -moz-linear-gradient(to left, #ebd974, #e6b39f);
+  background-image: -ms-linear-gradient(to left, #ebc974, #e6b39f);
+  background-image: -o-linear-gradient(to left,  #ebc974, #e6b39f);
+  background-image: -webkit-linear-gradient(to left,  #ebc974, #e6b39f);
+  background-image: linear-gradient(to left,  #ebc974, #e6b39f); }
 
 input[type=checkbox]:not(old) {
   width: 2em;
@@ -247,7 +250,7 @@ input[type=checkbox]:not(old) + label > span {
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   -ms-border-radius: 2px;
-  background: white;
+  background: rgba(255, 239, 185, 0.705);
   background-image: -moz-linear-gradient(white, white);
   background-image: -ms-linear-gradient(white, white);
   background-image: -o-linear-gradient(white, white);
@@ -275,10 +278,12 @@ input[type=checkbox]:not(old):checked + label > span:before {
 .label-agree-term {
   font-size: 12px;
   font-weight: 600;
-  color: #555; }
-
+  color: hsl(32, 66%, 23%); }
+label{
+  color: hsl(32, 66%, 23%);
+}
 .term-service {
-  color: #555; }
+  color: hsl(32, 66%, 23%);}
 
 .loginhere {
   color: rgb(54, 54, 54);
@@ -297,7 +302,7 @@ input[type=checkbox]:not(old):checked + label > span:before {
   margin-top: -32px;
   position: relative;
   z-index: 2;
-  color: #555; }
+  color: rgb(51, 51, 51); }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -305,9 +310,11 @@ input[type=checkbox]:not(old):checked + label > span:before {
     max-width: 100%; } }
 @media screen and (max-width: 480px) {
   .signup-content {
+  
     padding: 50px 25px; } }
 
 .form-control{
 background:none;
 border-color: black;
+color:black;
 }
