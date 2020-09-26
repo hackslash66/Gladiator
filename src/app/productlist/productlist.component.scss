@@ -1,6 +1,12 @@
 body {
-    background: #00b09b;
-    background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
-    background: linear-gradient(to right, #00b09b, #96c93d);
+    // background: #b07800;
+    // background: -webkit-linear-gradient(to right, #b07200, #c98c3d);
+    // background: linear-gradient(to right, #b08700, #c99d3d);
     min-height: 100vh;
+
+    background-image: -moz-linear-gradient(to left, #e7db94, #e4d7bcbe);
+    background-image: -ms-linear-gradient(to left, #e7d4a3, #e4d5c3c2);
+    background-image: -o-linear-gradient(to left,  #e9d5a2, #e4d1c2c9);
+    background-image: -webkit-linear-gradient(to left,  #e9d39c, #e4d3c0b7);
+    background-image: linear-gradient(to left,  #e7d5a5, #e6d1bfb7);
   }
