@@ -1,0 +1,278 @@
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <title>Sign Up Form by Colorlib</title> -->
+    
+        <!-- Font Icon 
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">-->
+    
+        <!-- Main css -->
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+    </head>
+    <body>
+      <app-indexnavbar></app-indexnavbar>
+
+        <div class="main" >
+    
+            <section class="signup">
+                <!-- <img src="images/signup-bg.jpg" alt=""> -->
+                <div class="container" >
+                    <div class="signup-content form" style=" background-color:hsla(44, 35%, 42%, 0.247);">
+                        <form method="POST" id="signup-form" class="signup-form" (ngSubmit)="updatePerson()" #addForm="ngForm" >
+                            <h2 class="form-title">Create account</h2>
+                            
+                           
+                          <div class="form-group" >
+                            <label for="code" style="opacity: 1.0;" ><b>Name</b></label>
+                            <input class='form-control' name="name" [(ngModel)]='register.name'
+                            required pattern="[A-Z][a-z]{3,}" placeholder="name" #name='ngModel' >
+                            <span *ngIf="name.touched && name.invalid" class="alert-danger">
+                                Name is invalid!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><b>Phone</b></label>
+                            <input class='form-control' name="phone" [(ngModel)]='register.phone'
+                            required pattern="[0-9]{10}" placeholder="phone" #phone='ngModel'>
+                            <span *ngIf="phone.touched && phone.invalid" class="alert-danger">
+                                Phone is invalid!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><b>Email Address</b></label>
+                          <input class='form-control' type="email" placeholder="ajit@gmail.com" name="email" [(ngModel)]='register.email'
+                          required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" #email='ngModel'>
+                          <span *ngIf="email.touched && email.invalid" class="alert-danger">
+                            Email is invalid!
+                          </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="uname"><b>Username</b></label>
+                            <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
+                            required pattern="[a-z]{3,}"  #uname='ngModel'>
+                            <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
+                               Username is invalid!
+                          </span>
+                        </div>
+                       
+                        
+                        
+                        <div class="form-group">
+                            <label for="psw"><b>Password</b></label>
+                          <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                          required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
+                          <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
+                            Password is invalid!
+                          </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpsw"><b>Confirm Password</b></label>
+                          <input  class='form-control' type="password" placeholder="min8chars@6" name="cpsw" [(ngModel)]='register.cpassword'
+                          required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #cpsw='ngModel'>
+                          <span *ngIf="cpsw.touched && cpsw.invalid" class="alert-danger">
+                            Password is invalid!
+                          </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="address"><b>Address</b></label>
+                          <input  class='form-control' type="text" placeholder="address" name="address" [(ngModel)]='register.address'
+                          required pattern="^[#.0-9a-zA-Z\s,-]+$"  #address='ngModel'>
+                          <span *ngIf="address.touched && address.invalid" class="alert-danger">
+                            Address is invalid!
+                          </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="card"><b>Card Type</b></label>
+                            <div class="form-control" >
+                                <label class="radio-inline"><input type="radio" value="gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
+                                <label class="radio-inline"><input type="radio" value="titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
+                            </div>
+                            <span *ngIf="card.touched && card.invalid" class="alert-danger">
+                                Card is invalid!
+                              </span>
+                        </div>
+                        
+                        <div class ="form-group">
+                            <label for="bank"><b>Bank</b></label> &nbsp;&nbsp;
+                            <select class="form-control" name="bank" [(ngModel)]=register.bank #category='ngModel' required>
+                                <option *ngFor="let r of banks" [value]="r">{{r}}</option>
+                            </select>
+                            <span *ngIf="category.touched && category.invalid" class="alert-danger">
+                                Bank is invalid!
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="account" ><b>Account Number</b></label>
+                          <input  class='form-control' type="text" placeholder="4512365214569874" name="account" [(ngModel)]='register.account'
+                          required pattern="[0-9]{16}"  #account='ngModel'>
+                          <span *ngIf="account.touched && account.invalid" class="alert-danger">
+                            Account number is invalid!
+                          </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="ifsc"><b>IFSC</b></label>
+                          <input  class='form-control' type="text" placeholder="SBIN0021956" name="ifsc" [(ngModel)]='register.ifsc'
+                          required pattern="^[A-Z]{4}0[A-Z0-9]{6}$"  #ifsc='ngModel'>
+                          <span *ngIf="ifsc.touched && ifsc.invalid" class="alert-danger">
+                            IFSC code is invalid!
+                          </span>
+                        </div>
+
+
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="submit" name="submit" id="submit" [disabled]="!addForm.valid" class="form-submit" value="Sign up"/>
+                            </div>
+                            
+                        </form>
+                        
+                    </div>
+                </div>
+            </section>
+    
+        </div>
+    
+        <!-- JS -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    </html>
+    
+    
+    
+    
+    <!-- <body>
+      <app-indexnavbar></app-indexnavbar>
+    <div class="float-container">
+
+        <div class="float-child1">
+          <div class="green">
+              <img src="assets/images/reg.jpeg" width="100%" height="619.5">
+          </div>
+        </div>
+        
+        <div class="float-child2">
+            <h3 class="heading">Register here!!</h3>
+          <div class="blue">
+            <form (ngSubmit)="savePerson()" #addForm="ngForm">
+                <div class="form-group">
+                    <label for="code"><b>Name</b></label>
+                    <input class='form-control' name="name" [(ngModel)]='register.name'
+                    required pattern="[A-Z][a-z]{3,}" placeholder="name" #name='ngModel'>
+                    <span *ngIf="name.touched && name.invalid" class="alert-danger">
+                        Name is invalid!
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="phone"><b>Phone</b></label>
+                    <input class='form-control' name="phone" [(ngModel)]='register.phone'
+                    required pattern="[0-9]{10}" placeholder="phone" #phone='ngModel'>
+                    <span *ngIf="phone.touched && phone.invalid" class="alert-danger">
+                        Phone is invalid!
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="email"><b>Email Address</b></label>
+                  <input class='form-control' type="email" placeholder="ajit@gmail.com" name="email" [(ngModel)]='register.email'
+                  required pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" #email='ngModel'>
+                  <span *ngIf="email.touched && email.invalid" class="alert-danger">
+                    Email is invalid!
+                  </span>
+                </div>
+                <div class="form-group">
+                    <label for="uname"><b>Username</b></label>
+                    <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
+                    required pattern="[a-z]{3,}"  #uname='ngModel'>
+                    <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
+                       Username is invalid!
+                  </span>
+                </div>
+               
+                
+                
+                <div class="form-group">
+                    <label for="psw"><b>Password</b></label>
+                  <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
+                  <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
+                    Password is invalid!
+                  </span>
+                </div>
+                <div class="form-group">
+                    <label for="cpsw"><b>Confirm Password</b></label>
+                  <input  class='form-control' type="password" placeholder="min8chars@6" name="cpsw" [(ngModel)]='register.cpassword'
+                  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #cpsw='ngModel'>
+                  <span *ngIf="cpsw.touched && cpsw.invalid" class="alert-danger">
+                    Password is invalid!
+                  </span>
+                </div>
+                <div class="form-group">
+                    <label for="address"><b>Address</b></label>
+                  <input  class='form-control' type="text" placeholder="address" name="address" [(ngModel)]='register.address'
+                  required pattern="^[#.0-9a-zA-Z\s,-]+$"  #address='ngModel'>
+                  <span *ngIf="address.touched && address.invalid" class="alert-danger">
+                    Address is invalid!
+                  </span>
+                </div>
+                <div class="form-group">
+                    <label for="card"><b>Card Type</b></label>
+                    <div class="form-control" >
+                        <label class="radio-inline"><input type="radio" value="gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
+                        <label class="radio-inline"><input type="radio" value="titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
+                    </div>
+                    <span *ngIf="card.touched && card.invalid" class="alert-danger">
+                        Card is invalid!
+                      </span>
+                </div>
+                
+                <div class ="form-group">
+                    <label for="bank"><b>Bank</b></label> &nbsp;&nbsp;
+                    <select class="form-control" name="bank" [(ngModel)]=register.bank #category='ngModel' required>
+                        <option *ngFor="let r of banks" [value]="r">{{r}}</option>
+                    </select>
+                    <span *ngIf="category.touched && category.invalid" class="alert-danger">
+                        Bank is invalid!
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label for="account"><b>Account Number</b></label>
+                  <input  class='form-control' type="text" placeholder="4512365214569874" name="account" [(ngModel)]='register.account'
+                  required pattern="[0-9]{16}"  #account='ngModel'>
+                  <span *ngIf="account.touched && account.invalid" class="alert-danger">
+                    Account number is invalid!
+                  </span>
+                </div>
+                <div class="form-group">
+                    <label for="ifsc"><b>IFSC</b></label>
+                  <input  class='form-control' type="text" placeholder="SBIN0021956" name="ifsc" [(ngModel)]='register.ifsc'
+                  required pattern="^[A-Z]{4}0[A-Z0-9]{6}$"  #ifsc='ngModel'>
+                  <span *ngIf="ifsc.touched && ifsc.invalid" class="alert-danger">
+                    IFSC code is invalid!
+                  </span>
+                </div>
+                <button class="btn btn-success" type="submit" [disabled]="!addForm.valid">Submit</button>
+            </form>
+          </div>
+          <p class="change_link">  
+            Already a member?
+            <a routerLink="/login" class="to-login"> Login Here</a>
+        </p>
+        </div>
+        
+        
+          
+      </div>
+      
+      
+        
+        
+      </body>
+      -->

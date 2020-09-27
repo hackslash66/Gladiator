@@ -18,6 +18,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditComponent } from './edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminacceptanceComponent,
     AboutusComponent,
     ContactusComponent,
-    ProductinfoComponent
+    ProductinfoComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

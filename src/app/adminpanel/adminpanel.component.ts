@@ -26,4 +26,8 @@ export class AdminpanelComponent implements OnInit {
     this.service.showperson(p);
     
   }
+  editEmp(uname : string)
+  {
+    this.service.edit(uname);
+  }
 }

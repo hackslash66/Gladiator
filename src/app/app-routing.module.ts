@@ -11,6 +11,7 @@ import {AdminacceptanceComponent} from './adminacceptance/adminacceptance.compon
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+import {EditComponent} from './edit/edit.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'aboutus',component:AboutusComponent},
   {path:'contactus',component:ContactusComponent},
   {path:'productinfo',component:ProductinfoComponent},
+  {path:'edit',component:EditComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];

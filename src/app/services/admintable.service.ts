@@ -3,6 +3,7 @@ import * as data from '../../assets/finance.json';
 import { Register } from '../register.model';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -28,4 +29,16 @@ export class AdmintableService {
   show(){
     return this.per;
   }
+  edit(uname: string)
+   {
+     this.router.navigate(['edit'],{queryParams: {uname: uname}});
+   }
+  update(emp: Register)
+  {
+   this.http.put(this.baseUrl + "/edit",emp).subscribe(data => data = emp);
+  }
+  findByUname(uname:string): Observable<Register>
+    {
+     return this.http.get<Register>(this.baseUrl+"/fetch/"+uname);
+    }
 }
