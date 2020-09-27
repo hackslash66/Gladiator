@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
 import * as data from '../../assets/finance.json';
 import { Register } from '../register.model';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AdmintableService {
+  private baseUrl: string = "http://localhost:8080/backend/rest";
   per:Register;
-  personList:any=(data as any).default;
-  constructor() { }
+  //personList:any=(data as any).default;
+  constructor(private router: Router, private http: HttpClient) { }
   saveperson(p:Register){
-    this.personList.push(p);
+    this.http.post(this.baseUrl + "/add",p).subscribe(data => data = p);
   }
 
-  getList():Register[]{
-    return this.personList;
+  getList(){
+    return this.http.get<Register[]>(this.baseUrl+"/list");
   }
-  deleteperson(index:number){
-    return this.personList.splice(index,1);
-  }
+  // deleteperson(index:number){
+  //   return this.personList.splice(index,1);
+  // }
   showperson(p:Register){
        this.per=p;
        return p;

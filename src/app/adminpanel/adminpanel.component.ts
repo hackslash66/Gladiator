@@ -11,14 +11,15 @@ export class AdminpanelComponent implements OnInit {
   list:Register[]=[];
   constructor(private router:Router, private service: AdmintableService) { }
 
-  ngOnInit(): void {
-    this.list=this.service.getList();
+  ngOnInit() {
+    //this.list = this.service.getList();
+    this.service.getList().subscribe(data => this.list = data);
   }
   delete(index:number){
-    var ans=confirm("Are you sure, you want to delete?");
-    if(ans){
-      this.service.deleteperson(index);
-    }
+    // var ans=confirm("Are you sure, you want to delete?");
+    // if(ans){
+    //   this.service.deleteperson(index);
+    // }
   }
   show(p:Register){
     this.router.navigate(['adminaccept']);

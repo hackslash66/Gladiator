@@ -17,6 +17,7 @@ import { AdminacceptanceComponent } from './adminacceptance/adminacceptance.comp
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { ProductinfoComponent } from './productinfo/productinfo.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   
+   HttpClientModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
