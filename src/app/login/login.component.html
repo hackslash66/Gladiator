@@ -29,7 +29,7 @@
                    
                     <div class="form-group">
                         <label for="uname"><b>Username</b></label>
-                        <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='register.uname'
+                        <input class='form-control' type="text" placeholder="Enter Username" name="uname"  [(ngModel)]='login.uname'
                         required pattern="[a-z]{3,}"  #uname='ngModel'>
                         <span *ngIf="uname.touched && uname.invalid" class="alert-danger">
                            Username is invalid!
@@ -40,7 +40,7 @@
                     
                     <div class="form-group">
                         <label for="psw"><b>Password</b></label>
-                      <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='register.password'
+                      <input  class='form-control' type="password" placeholder="min8chars@6" name="psw" [(ngModel)]='login.password'
                       required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"  #psw='ngModel'>
                       <span *ngIf="psw.touched && psw.invalid" class="alert-danger">
                         Password is invalid!
