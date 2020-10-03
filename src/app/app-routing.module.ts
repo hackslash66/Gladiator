@@ -12,6 +12,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import {EditComponent} from './edit/edit.component';
+import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'contactus',component:ContactusComponent},
   {path:'productinfo',component:ProductinfoComponent},
   {path:'edit',component:EditComponent},
+  {path:'orderdetails',component:OrderdetailsComponent},
   {path:'',redirectTo:'/index',pathMatch:'full'},
   {path:'**',redirectTo:'/index',pathMatch:'full'}
 ];

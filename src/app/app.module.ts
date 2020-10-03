@@ -19,6 +19,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ProductinfoComponent } from './productinfo/productinfo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditComponent } from './edit/edit.component';
+import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { EditComponent } from './edit/edit.component';
     AboutusComponent,
     ContactusComponent,
     ProductinfoComponent,
-    EditComponent
+    EditComponent,
+    OrderdetailsComponent
   ],
   imports: [
     BrowserModule,
