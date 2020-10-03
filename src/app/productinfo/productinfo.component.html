@@ -14,7 +14,7 @@
     <div class="container py-5">
         <div class="row text-center text-black mb-5">
             <div class="col-lg-7 mx-auto">
-                <h1 class="display-4">{{p.pname}}</h1>
+                <h1 class="display-4">{{p.pName}}</h1>
             </div>
         </div>
         <div class="row">
@@ -26,10 +26,10 @@
                         <!-- Custom content-->
                         <div class="media align-items-lg-center flex-column flex-lg-row p-3">
                             <div class="media-body order-2 order-lg-1">
-                                <h5 class="mt-0 font-weight-bold mb-2">{{p.pname}}</h5>
-                                <p class="font-italic text-muted mb-0 small">{{p.pdes}}</p>
+                                <h5 class="mt-0 font-weight-bold mb-2">{{p.pName}}</h5>
+                                <p class="font-italic text-muted mb-0 small">{{p.pDetails}}</p>
                                 <div class="d-flex align-items-center justify-content-between mt-1">
-                                    <h6 class="font-weight-bold my-2">₹{{p.prate}}</h6>
+                                    <h6 class="font-weight-bold my-2">₹{{p.pRate}}</h6>
                                     
                                     <div class ="form-group">
                                         <label for="emi"><b>EMI</b></label> &nbsp;&nbsp;
@@ -43,7 +43,7 @@
                                     </div>
                                     <button (click)="buynow()" type="button" class="btn btn-primary" >Buy Now!</button>
                                 </div>
-                            </div><img src={{p.purl}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                            </div><img src={{p.ImgSrc}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
                         </div> <!-- End -->
                     </li> <!-- End -->
                     <!-- list group item-->
