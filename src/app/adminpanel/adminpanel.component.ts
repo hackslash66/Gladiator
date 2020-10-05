@@ -35,5 +35,6 @@ export class AdminpanelComponent implements OnInit {
   status(per:Register){
     per.status="accepted";
     this.service.updatestatus(per);
+    alert("User has been accepted!!");
   }
 }

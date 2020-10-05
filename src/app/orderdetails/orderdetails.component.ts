@@ -6,6 +6,8 @@ import { Transaction } from '../transaction.model';
 import { TransactionService } from '../services/transaction.service';
 import { DashboardService } from '../services/dashboard.service';
 import { Router } from '@angular/router';
+import { Emicard } from '../emicard.model';
+import { EmicardService } from '../services/emicard.service';
 
 @Component({
   selector: 'app-orderdetails',
@@ -16,10 +18,12 @@ export class OrderdetailsComponent implements OnInit {
 
   ord=new Order;
   trans= new Transaction;
+  card= new Emicard;
+  emidetails:Emicard;
   login:Register;
   list:Transaction[]=[];
   orderlist:Order[]=[];
-  constructor(private service: DashboardService, private service2: TransactionService, private router: Router) { 
+  constructor(private service: DashboardService, private service2: TransactionService, private router: Router,private service3: EmicardService) { 
     
     
   }
@@ -28,9 +32,10 @@ export class OrderdetailsComponent implements OnInit {
     this.ord=this.service.show();
     this.trans.orderID=this.ord.orderID;
     console.log(this.trans.orderID);
-    //this.login = JSON.parse(localStorage.getItem('user'));
-    //console.log(this.login);
-    //this.service.getList(this.login).subscribe(data => this.orderlist = data);
+    this.login = JSON.parse(localStorage.getItem('user'));
+    //this.p.user.uname=this.login.uname;
+    this.card.cardNo=this.login.account;
+    this.service3.getCard(this.card).subscribe(data=>this.emidetails=data);
     this.service2.getOrders(this.trans).subscribe(data => this.list = data);
   }
   
@@ -55,7 +60,9 @@ export class OrderdetailsComponent implements OnInit {
     this.ord.dueAmount=this.rate-this.ord.amountPaid;
     console.log(this.ord);
     this.service.editorder(this.ord);
-
+    
+    this.emidetails.balance=this.emidetails.balance-Math.round(this.rate/this.ord.emiDuration);
+    this.service3.updatecard(this.emidetails);
    
     this.transaction.transactionDate=this.jstoday;
     this.transaction.orderID=this.ord.orderID;

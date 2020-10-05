@@ -5,6 +5,8 @@ import { Login } from '../login.model';
 import { Order } from '../order.model';
 import { Product } from '../product.model';
 import { Register } from '../register.model';
+import { Emicard } from '../emicard.model';
+import { EmicardService } from '../services/emicard.service';
 import { ProductlistService } from '../services/productlist.service';
 
 @Component({
@@ -16,11 +18,13 @@ export class ProductinfoComponent implements OnInit {
 
   p:Product;
   login:Register;
+  card= new Emicard;
   ord= new Order;
   emi:number[];
+  emidetails:Emicard;
   myDate = new Date();
   jstoday='';
-  constructor(private router:Router, private service: ProductlistService) {
+  constructor(private router:Router, private service: ProductlistService, private service2: EmicardService) {
     this.emi=[3,6,9,12];
     this.jstoday = formatDate(this.myDate, 'dd-MM-yyyy', 'en-US', '+0530');
     console.log(this.jstoday);
@@ -30,7 +34,8 @@ export class ProductinfoComponent implements OnInit {
     this.p=this.service.showpro();
     this.login = JSON.parse(localStorage.getItem('user'));
     //this.p.user.uname=this.login.uname;
-    
+    this.card.cardNo=this.login.account;
+    this.service2.getCard(this.card).subscribe(data=>this.emidetails=data);
     //this.p.pId=10;
   }
 
@@ -46,10 +51,16 @@ export class ProductinfoComponent implements OnInit {
 
     console.log(this.ord.amountPaid);
     console.log(this.ord);
+
+    this.emidetails.balance=this.emidetails.balance-this.ord.amountPaid;
+    this.service2.updatecard(this.emidetails);
+
     this.service.buynow(this.ord);
-     
+   // this.emidetails.balance=this.emidetails.balance-this.ord.amountPaid;
+     //this.service2.updatecard(this.emidetails);
+     console.log(this.emidetails);
       alert("product bought successfully");
-      //this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard']);
   
 }
 }
