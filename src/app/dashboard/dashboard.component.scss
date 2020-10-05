@@ -103,7 +103,7 @@ table{
     margin-left: 10%;
     margin-right: 10%;
     margin-top:3%;
-    width:80%;
+    width:100%;
     border-style:solid;
     border-color: rgb(68, 45, 0);
 }
@@ -144,4 +144,8 @@ th{
   .vertical-menu a.active {
     background-color: hsla(46, 33%, 33%, 0.733); /* Dark grey background on mouse-over */
     color: rgba(61, 43, 2, 0.89); ;
+  }
+
+ .trans_table{
+    color: white;
   }

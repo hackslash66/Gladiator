@@ -17,11 +17,11 @@ export class ProductinfoComponent implements OnInit {
   p:Product;
   login:Register;
   ord= new Order;
-  emi:string[];
+  emi:number[];
   myDate = new Date();
   jstoday='';
   constructor(private router:Router, private service: ProductlistService) {
-    this.emi=['3','6','9','12'];
+    this.emi=[3,6,9,12];
     this.jstoday = formatDate(this.myDate, 'dd-MM-yyyy', 'en-US', '+0530');
     console.log(this.jstoday);
    }
@@ -40,7 +40,10 @@ export class ProductinfoComponent implements OnInit {
     this.ord.productname=this.p.pname;
     this.ord.producturl=this.p.purl;
     this.ord.orderDate=this.jstoday;
-    this.ord.amountPaid=this.p.prate;
+    this.ord.monthsLeft=this.ord.emiDuration-1;
+    this.ord.amountPaid=Math.round(this.p.prate/this.ord.emiDuration);
+    this.ord.dueAmount=Math.round(this.ord.amountPaid * this.ord.monthsLeft);
+
     console.log(this.ord.amountPaid);
     console.log(this.ord);
     this.service.buynow(this.ord);

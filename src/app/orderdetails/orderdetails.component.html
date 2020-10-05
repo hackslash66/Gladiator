@@ -1,10 +1,28 @@
-
-<div style="margin-left: 350px;">
+<app-dashboardnavbar></app-dashboardnavbar>
+<div class="orderdiv">
     <h2>Order Details !!</h2>
 <p>{{ord.productname}}</p>
 <img src={{ord.producturl}} width="350" height="300">
 <p>Order date:&nbsp;{{ord.orderDate}}</p>
-<p>{{ord.monthsLeft}}</p>
+<p>Months Left: &nbsp;{{ord.monthsLeft}}</p>
 <p>Amount Paid: &nbsp;{{ord.amountPaid}}</p>
-<p>{{ord.dueAmount}}</p>
+<p>Due Amount: &nbsp;{{ord.dueAmount}}</p>
+<button class="btn btn-primary" (click)="paynow()">Pay Monthly EMI!!</button>
+</div>
+<div class="transactions division">
+    <h1 class="transtableheading">Recent transactions</h1>
+    <table class="table table-dark table-striped srk">
+        <tr>
+            <th>Product</th>
+            <th>Date</th>
+            <th>Amount Paid</th>
+           
+        </tr>
+        <tr *ngFor="let ord of list; let i=index">
+             <td>{{ord.orderID}}</td>
+             <td>{{ord.transactionDate}}</td>
+             <td>{{ord.amountPaid}}</td>
+             
+        </tr>
+    </table>
 </div>

@@ -26,5 +26,7 @@ export class DashboardService {
 show(){
  return this.ord;
 }
-  
+editorder(ord:Order){
+  this.http.put(this.baseUrl + "/editorder",ord).subscribe(data => data = ord);
+}
 }

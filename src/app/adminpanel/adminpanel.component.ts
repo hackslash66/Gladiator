@@ -9,6 +9,7 @@ import {AdmintableService} from '../services/admintable.service';
 })
 export class AdminpanelComponent implements OnInit {
   list:Register[]=[];
+  
   constructor(private router:Router, private service: AdmintableService) { }
 
   ngOnInit() {
@@ -29,5 +30,10 @@ export class AdminpanelComponent implements OnInit {
   editEmp(uname : string)
   {
     this.service.edit(uname);
+  }
+
+  status(per:Register){
+    per.status="accepted";
+    this.service.updatestatus(per);
   }
 }

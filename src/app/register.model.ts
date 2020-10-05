@@ -12,4 +12,5 @@ export class Register{
     public bank:string;
     public account:string;
     public ifsc:string;
+    public status:string;
 }

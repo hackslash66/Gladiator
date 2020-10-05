@@ -4,6 +4,7 @@ import { Register } from '../register.model';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { Order } from '../order.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -41,4 +42,10 @@ export class AdmintableService {
     {
      return this.http.get<Register>(this.baseUrl+"/fetch/"+uname);
     }
+    updatestatus(p:Register){
+    
+      this.http.put(this.baseUrl + "/edit",p).subscribe(data => data = p);
+    }
+
+    
 }

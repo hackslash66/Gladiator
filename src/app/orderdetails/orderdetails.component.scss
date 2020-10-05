@@ -1,0 +1,27 @@
+.transtableheading{
+text-align: center;
+color: white;
+background-color: black;
+margin-top: 30px;
+margin-bottom: 0px;
+width: 70%;
+margin-left: auto;
+margin-right: auto;
+}
+.table{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.orderdiv{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    text-align: center;
+    background-image: -moz-linear-gradient(to left, #e7db94, #e4d7bcbe);
+    background-image: -ms-linear-gradient(to left, #e7d4a3, #e4d5c3c2);
+    background-image: -o-linear-gradient(to left,  #e9d5a2, #e4d1c2c9);
+    background-image: -webkit-linear-gradient(to left,  #e9d39c, #e4d3c0b7);
+    background-image: linear-gradient(to left,  #e7d5a5, #e6d1bfb7);
+}
