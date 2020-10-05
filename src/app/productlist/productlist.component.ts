@@ -9,12 +9,12 @@ import {ProductlistService} from '../services/productlist.service';
   styleUrls: ['./productlist.component.scss']
 })
 export class ProductlistComponent implements OnInit {
+
   list:Product[]=[];
-  
   constructor(private router:Router, private service: ProductlistService) { }
 
   ngOnInit(): void {
-    this.service.getProductList().subscribe(data => this.list = data);
+    this.list=this.service.getProductList();
   }
  
   show(p:Product){

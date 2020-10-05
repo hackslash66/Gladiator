@@ -1,47 +1,47 @@
 <body>
-<div>
-    <div class="container-fluid">
-        <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-link">Hi, Username </li>
-                <li class="nav-item active">
-                   <a class="nav-link" routerLink="/index">Logout</a>
-                </li>
-                
-            </ul>
-        </nav> -->
-        <app-dashboardnavbar></app-dashboardnavbar>
-    </div>
-    <div class="container py-5">
-        <div class="row text-center text-black mb-5">
-            <div class="col-lg-7 mx-auto">
-                <h1 class="display-4">Product List</h1>
+    <div>
+        <div class="container-fluid">
+            <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-link">Hi, Username </li>
+                    <li class="nav-item active">
+                       <a class="nav-link" routerLink="/index">Logout</a>
+                    </li>
+                    
+                </ul>
+            </nav> -->
+            <app-dashboardnavbar></app-dashboardnavbar>
+        </div>
+        <div class="container py-5">
+            <div class="row text-center text-black mb-5">
+                <div class="col-lg-7 mx-auto">
+                    <h1 class="display-4">Product List</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <!-- List group-->
+                    <ul class="list-group shadow">
+                        <!-- list group item-->
+                        <li class="list-group-item" *ngFor="let p of list; let i=index">
+                            <!-- Custom content-->
+                            <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+                                <div class="media-body order-2 order-lg-1">
+                                    <h5 class="mt-0 font-weight-bold mb-2">{{p.pname}}</h5>
+                                    <p class="font-italic text-muted mb-0 small">{{p.pdes}}</p>
+                                    <div class="d-flex align-items-center justify-content-between mt-1">
+                                        <h6 class="font-weight-bold my-2">₹{{p.prate}}</h6>
+                                        <button type="button" class="btn btn-primary" (click)="show(p)">Buy Now!</button>
+                                    </div>
+                                </div><img src={{p.purl}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+                            </div> <!-- End -->
+                        </li> <!-- End -->
+                        <!-- list group item-->
+                        <!-- End -->
+                    </ul> <!-- End -->
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <!-- List group-->
-                <ul class="list-group shadow">
-                    <!-- list group item-->
-                    <li class="list-group-item" *ngFor="let p of list; let i=index">
-                        <!-- Custom content-->
-                        <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                            <div class="media-body order-2 order-lg-1">
-                                <h5 class="mt-0 font-weight-bold mb-2">{{p.pName}}</h5>
-                                <p class="font-italic text-muted mb-0 small">{{p.pDetails}}</p>
-                                <div class="d-flex align-items-center justify-content-between mt-1">
-                                    <h6 class="font-weight-bold my-2">₹{{p.pRate}}</h6>
-                                    <button type="button" class="btn btn-primary" (click)="show(p)">Buy Now!</button>
-                                </div>
-                            </div><img src={{p.pImgSrc}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-                        </div> <!-- End -->
-                    </li> <!-- End -->
-                    <!-- list group item-->
-                    <!-- End -->
-                </ul> <!-- End -->
-            </div>
-        </div>
     </div>
-</div>
-
-</body>
+    
+    </body>
