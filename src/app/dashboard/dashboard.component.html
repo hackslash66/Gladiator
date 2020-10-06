@@ -39,11 +39,11 @@
                         <td class="values">{{login.uname}}</td>
                     </tr>
                     <tr>
-                        <td>Valid till:</td>
+                        <td>Valid from:</td>
                         <td class="values">{{emidetails.issueDate}}</td>
                     </tr>
                     <tr>
-                        <td>Card type:</td>
+                        <td>Valid till:</td>
                         <td class="values">{{emidetails.expiryDate}}</td>
                     </tr>
                 </table>
@@ -53,8 +53,8 @@
             <div class="credit_info division">
                 <div class="header" >Credit details</div>
                 <div class="c_details">
-                <p>Total credit:200000</p>
-            <p> credit used:</p>
+                <p>Total : {{allocated}}</p>
+            <p> card Type: {{login.card}}</p>
             <p> remaining credit:{{emidetails.balance}}</p>
         </div>
             </div>

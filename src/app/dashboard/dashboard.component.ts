@@ -1,3 +1,5 @@
+import { IfStmt } from '@angular/compiler';
+import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/template';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Emicard } from '../emicard.model';
@@ -15,12 +17,19 @@ export class DashboardComponent implements OnInit {
   login:Register;
   card= new Emicard;
   list:Order[]=[];
+  allocated:number;
   emidetails:Emicard;
   constructor(private router:Router,private service: DashboardService, private service2: EmicardService) { }
  
   ngOnInit(): void {
     
     this.login = JSON.parse(localStorage.getItem('user'));
+     if(this.login.card=="gold"){
+           this.allocated=200000;
+     }
+     else{
+           this.allocated=500000;
+     }
     //console.log(this.login);
     this.service.getList(this.login).subscribe(data => this.list = data);
     this.card.cardNo=this.login.account;

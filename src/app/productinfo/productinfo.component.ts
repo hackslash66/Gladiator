@@ -40,6 +40,10 @@ export class ProductinfoComponent implements OnInit {
   }
 
   buynow() {
+    if(this.ord.emiDuration==null){
+      alert("Select EMI Duration!!");
+    }
+    else{
    this.ord.user=this.login;
     this.ord.product=this.p;
     this.ord.productname=this.p.pname;
@@ -51,7 +55,7 @@ export class ProductinfoComponent implements OnInit {
 
     console.log(this.ord.amountPaid);
     console.log(this.ord);
-
+    if(this.emidetails.balance-this.ord.amountPaid > 0){
     this.emidetails.balance=this.emidetails.balance-this.ord.amountPaid;
     this.service2.updatecard(this.emidetails);
 
@@ -61,6 +65,10 @@ export class ProductinfoComponent implements OnInit {
      console.log(this.emidetails);
       alert("product bought successfully");
       this.router.navigate(['dashboard']);
-  
+    }
+    else{
+      alert("You dont have enough money in your card!!");
+    }
+    }
 }
 }
