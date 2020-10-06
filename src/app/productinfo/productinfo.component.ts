@@ -46,8 +46,6 @@ export class ProductinfoComponent implements OnInit {
     else{
    this.ord.user=this.login;
     this.ord.product=this.p;
-    this.ord.productname=this.p.pname;
-    this.ord.producturl=this.p.purl;
     this.ord.orderDate=this.jstoday;
     this.ord.monthsLeft=this.ord.emiDuration-1;
     this.ord.amountPaid=Math.round(this.p.prate/this.ord.emiDuration);

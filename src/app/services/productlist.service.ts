@@ -17,8 +17,8 @@ export class ProductlistService {
   constructor(private http: HttpClient) { }
  
 
-  getProductList():Product[]{
-    return this.productList;
+  getProductList(){
+    return this.http.get<Product[]>(this.baseUrl+"/listproducts");
   }
   
   showproduct(p:Product){

@@ -87,7 +87,7 @@
                         <th>Extra details</th>
                     </tr>
                     <tr *ngFor="let ord of list; let i=index">
-                         <td>{{ord.productname}}</td>
+                         <td>{{ord.product.pname}}</td>
                          <td>{{ord.orderDate}}</td>
                          <td>{{ord.amountPaid}}</td>
                          <td><button class="btn btn-primary" (click)="show(ord)">More details</button></td>

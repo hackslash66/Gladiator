@@ -6,8 +6,6 @@ export class Order{
     public orderID:any;
     public user:Register;
     public product:Product;
-    public productname:string;
-    public producturl:string;
     public emiDuration: number;
     public orderDate:string;
     public amountPaid:number;
