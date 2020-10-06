@@ -59,6 +59,9 @@ export class OrderdetailsComponent implements OnInit {
    this.ord.amountPaid=this.ord.amountPaid+ Math.round(this.rate/this.ord.emiDuration);
     this.ord.dueAmount=this.rate-this.ord.amountPaid;
     console.log(this.ord);
+    if(this.emidetails.balance-Math.round(this.rate/this.ord.emiDuration) > 0){
+
+    
     this.service.editorder(this.ord);
     
     this.emidetails.balance=this.emidetails.balance-Math.round(this.rate/this.ord.emiDuration);
@@ -71,6 +74,11 @@ export class OrderdetailsComponent implements OnInit {
     this.service2.buynow(this.transaction);
     alert((this.ord.emiDuration-this.ord.monthsLeft) + " month EMI paid!!")
     this.router.navigate(['dashboard']);
+
+    }
+    else{
+      alert("You dont have enough money in your card!!");
+    }
    }
   }
 
