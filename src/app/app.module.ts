@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditComponent } from './edit/edit.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { DashboardnavbarComponent } from './dashboardnavbar.component';
+import { EditforuserComponent } from './editforuser/editforuser.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { DashboardnavbarComponent } from './dashboardnavbar.component';
     ProductinfoComponent,
     EditComponent,
     OrderdetailsComponent,
-    DashboardnavbarComponent
+    DashboardnavbarComponent,
+    EditforuserComponent
   ],
   imports: [
     BrowserModule,
