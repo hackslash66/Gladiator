@@ -34,6 +34,10 @@ export class AdmintableService {
    {
      this.router.navigate(['edit'],{queryParams: {uname: uname}});
    }
+   edit2(uname: string)
+   {
+     this.router.navigate(['editforuser'],{queryParams: {uname: uname}});
+   }
   update(emp: Register)
   {
    this.http.put(this.baseUrl + "/edit",emp).subscribe(data => data = emp);

@@ -6,6 +6,7 @@ import { Emicard } from '../emicard.model';
 import { Login } from '../login.model';
 import { Order } from '../order.model';
 import { Register } from '../register.model';
+import { AdmintableService } from '../services/admintable.service';
 import {DashboardService} from '../services/dashboard.service';
 import {EmicardService} from '../services/emicard.service';
 @Component({
@@ -19,7 +20,7 @@ export class DashboardComponent implements OnInit {
   list:Order[]=[];
   allocated:number;
   emidetails:Emicard;
-  constructor(private router:Router,private service: DashboardService, private service2: EmicardService) { }
+  constructor(private router:Router,private service: DashboardService, private service2: EmicardService,private service4:AdmintableService) { }
  
   ngOnInit(): void {
     
@@ -40,5 +41,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['orderdetails']);
     this.service.showdetails(o);
     
+  }
+  editEmp(){
+    this.service4.edit2(this.login.uname);
   }
 }
