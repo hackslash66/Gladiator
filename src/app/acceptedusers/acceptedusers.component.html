@@ -1,0 +1,48 @@
+
+<app-indexnavbar></app-indexnavbar>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" routerLink="/adminpanel">Not Accepted</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" routerLink="/accepedusers">Accepted</a>
+      </li>
+     
+    </ul>
+</nav>
+
+<h2>List of Users</h2>
+<table class="table table-dark table-striped srk">
+    <thead>
+        <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Show more</th>
+        <th>Action</th>
+        <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of list; let i=index">
+            <td>
+               {{p.uname}}
+            </td>
+            <td>{{p.email}}</td>
+            
+            <td>
+              <button class="btn btn-primary" (click)="show(p)">More details</button>
+            </td>
+            <td>
+              <button class="btn btn-success" (click)="status(p)">Accept</button>
+            </td>
+            <td>
+              <!-- <button class="btn btn-danger" (click)="delete(i)">Delete</button> &nbsp; -->
+              <button class="btn btn-success" (click)="editEmp(p.uname)">Edit</button>
+           </td>
+        </tr>
+    </tbody>
+    </table>
+    

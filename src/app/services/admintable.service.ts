@@ -51,5 +51,8 @@ export class AdmintableService {
       this.http.put(this.baseUrl + "/edit",p).subscribe(data => data = p);
     }
 
+    getListIfAcc(){
+      return this.http.get<Register[]>(this.baseUrl+"/acceptedusers");
+    }
     
 }
