@@ -23,6 +23,7 @@ import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { DashboardnavbarComponent } from './dashboardnavbar.component';
 import { EditforuserComponent } from './editforuser/editforuser.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     OrderdetailsComponent,
     DashboardnavbarComponent,
     EditforuserComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
