@@ -6,3 +6,24 @@ body {
   background-image: -webkit-linear-gradient(to left,  #e9d39c, #e4d3c0b7);
   background-image: linear-gradient(to left,  #e7d5a5, #e6d1bfb7);
   }
+
+.buy{
+  background-image: -moz-linear-gradient(to left, #ebd974, #e6b39f);
+  background-image: -ms-linear-gradient(to left, #ebc974, #e6b39f);
+  background-image: -o-linear-gradient(to left,  #ebc974, #e6b39f);
+  background-image: -webkit-linear-gradient(to left,  #ebc974, #e6b39f);
+  background-image: linear-gradient(to left,  #ebc974, #e6b39f); 
+  margin-top: 2%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+}

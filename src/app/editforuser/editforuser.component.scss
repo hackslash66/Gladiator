@@ -39,11 +39,56 @@
 
 
 
+.vertical-menu {
+  width: 13%;
+  padding-right: 10px;
+  margin-left: 18%;
+  float: left;
+  
+  /* Set a width if you like */
+}
+
+.vertical-menu a { /* Grey background color */ /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 8px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  background-image: -moz-linear-gradient(to left, #e7db94, #e4d7bcbe);
+  background-image: -ms-linear-gradient(to left, #e7d4a3, #e4d5c3c2);
+  background-image: -o-linear-gradient(to left,  #e9d5a2, #e4d1c2c9);
+  background-image: -webkit-linear-gradient(to left,  #e9d39c, #e4d3c0b7);
+  background-image: linear-gradient(to left,  #e7d5a5, #e6d1bfb7);
+  background-color:hsla(44, 40%, 41%, 0.5);
+  color: black;
+ 
+}
+
+.vertical-menu a:hover {
+  background-image: -moz-linear-gradient(to left, #e7ca94, #e4c891be);
+  background-image: -ms-linear-gradient(to left, #e7c4a3, #e4be91c2);
+  background-image: -o-linear-gradient(to left,  #e9c5a2, #e4b897c9);
+  background-image: -webkit-linear-gradient(to left,  #e9c39c, #e2be95b7);
+  background-image: linear-gradient(to left,  #e7c5a5, #e7bd98b7);
+  background-color:hsla(45, 62%, 35%, 0.603);/* Dark grey background on mouse-over */
+  color: rgba(0, 0, 0, 0.89); ;
+}
+
+.vertical-menu a.active {
+  background-image: -moz-linear-gradient(to left, #e7cb94, #e4c891be);
+  background-image: -ms-linear-gradient(to left, #e7c4a3, #e4be91c2);
+  background-image: -o-linear-gradient(to left,  #e9c5a2, #e4b897c9);
+  background-image: -webkit-linear-gradient(to left,  #e9c39c, #e2be95b7);
+  background-image: linear-gradient(to left,  #e7c5a5, #e7bd98b7);
+  background-color:hsla(45, 62%, 35%, 0.603); /* Dark grey background on mouse-over */
+  color: rgba(0, 0, 0, 0.89); ;
+}
 
 
 
 
 
+.main{
+  margin-top: 100px;
+}
 
 
   

@@ -22,7 +22,7 @@
     <div class="bcgd panel panel-default">
         <div class="vertical-menu " >
             <a href="#" class="active">Account</a>
-            <a  (click)=editEmp()>Edit Profile</a>
+            <a routerLink="/editforuser">Edit Profile</a>
             <a href="#">Change Password</a>
           </div>
         
@@ -59,24 +59,7 @@
         </div>
             </div>
     
-            <div class="division">
-                <div class="header" >Products purchased</div>
-            
-            <div class="products_list">
-                <table>
-                    <tr >
-                        <td>Product Name:</td><td class="values">Iphone</td>
-                        <td >Amount:</td><td class="values">70,000</td>
-                    </tr>
-                    <tr>
-                        <td>Paid:</td><td class="values">15,000</td>
-                    </tr>
-                    <tr>
-                        <td>Balance:</td><td class="values">55,000</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+           
             <div class="transactions division">
                 <div class="header" >Recent transactions</div>
                 <table class="table table-dark table-striped trans_table" style="margin-left: 0px;">
@@ -86,8 +69,8 @@
                         <th>Amount Paid</th>
                         <th>Extra details</th>
                     </tr>
-                    <tr *ngFor="let ord of list; let i=index">
-                         <td>{{ord.product.pname}}</td>
+                    <tr *ngFor="let ord of list; let i=index" class="rows">
+                         <td>{{ord.productname}}</td>
                          <td>{{ord.orderDate}}</td>
                          <td>{{ord.amountPaid}}</td>
                          <td><button class="btn btn-primary" (click)="show(ord)">More details</button></td>

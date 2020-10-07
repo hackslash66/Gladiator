@@ -37,12 +37,10 @@
                                             <select class="form-control" name="emi" [(ngModel)]=ord.emiDuration #category='ngModel' required>
                                                 <option *ngFor="let r of emi" [value]="r">{{r}}</option>
                                             </select>
-                                            <span *ngIf="category.touched && category.invalid" class="alert-danger">
-                                                Bank is invalid!
-                                            </span>
+                                           
                                             
                                         </div>
-                                        <button (click)="buynow()" type="button" class="btn btn-primary" >Buy Now!</button>
+                                        <button (click)="buynow()" type="button" class="btn btn-primary buy" >Buy Now!</button>
                                     </div>
                                 </div><img src={{p.purl}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
                             </div> <!-- End -->

@@ -1,5 +1,6 @@
 <body>
-    <div>
+    <app-dashboardnavbar></app-dashboardnavbar>
+    <div width="100%">
         <div class="container-fluid">
             <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <ul class="nav navbar-nav ml-auto">
@@ -10,7 +11,7 @@
                     
                 </ul>
             </nav> -->
-            <app-dashboardnavbar></app-dashboardnavbar>
+            
         </div>
         <div class="container py-5">
             <div class="row text-center text-black mb-5">
@@ -18,30 +19,68 @@
                     <h1 class="display-4">Product List</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <!-- List group-->
-                    <ul class="list-group shadow">
-                        <!-- list group item-->
-                        <li class="list-group-item" *ngFor="let p of list; let i=index">
-                            <!-- Custom content-->
-                            <div class="media align-items-lg-center flex-column flex-lg-row p-3">
-                                <div class="media-body order-2 order-lg-1">
-                                    <h5 class="mt-0 font-weight-bold mb-2">{{p.pname}}</h5>
-                                    <p class="font-italic text-muted mb-0 small">{{p.pdes}}</p>
-                                    <div class="d-flex align-items-center justify-content-between mt-1">
-                                        <h6 class="font-weight-bold my-2">₹{{p.prate}}</h6>
-                                        <button type="button" class="btn btn-primary" (click)="show(p)">Buy Now!</button>
-                                    </div>
-                                </div><img src={{p.purl}} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-                            </div> <!-- End -->
-                        </li> <!-- End -->
-                        <!-- list group item-->
-                        <!-- End -->
-                    </ul> <!-- End -->
-                </div>
-            </div>
+            
+            
         </div>
+        <div class="products">
+        <div class="col" >
+            <div class="row">
+        
+        <div class=" col-12 col-md-6 col-lg-4" *ngFor="let p of list; let i=index">
+            <!-- Custom content-->
+            <div class="wrapper">
+                <div class="container">
+                   <img src={{p.purl}}  width=" 90%"height="80%"> 
+                  <!-- <div class="top" [style.background]="'url('+p.purl+')'" style=" background-size: 10px 10px;" ></div> -->
+                  <div class="bottom">
+                    <div class="left">
+                      <div class="details">
+                        <h5>{{p.pname}}</h5>
+                        <p>₹{{p.prate}}</p>
+                     
+                    
+                  </div>
+                  <div class="buy_button">
+                  <button type="button" class="buy" (click)="show(p)">Buy Now!</button>
+                </div>      
+                </div>
+                <div class="inside">
+                  <div class="icon">
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                        <circle cx="8" cy="4.5" r="1"/>
+                      </svg>
+                    </div>
+                    <div class="info">
+                  <div class="contents" style="color: rgb(0, 0, 0);">
+                    <h5>{{p.pdes}} </h5>
+                    <h4 style="margin-top: 20px;">EMI starts at {{math.round(p.prate/9)}} pm </h4>
+                </div>
+                </div>
+                </div>
+              </div>
+                </div>
+              </div>
+            <!-- <div class="card">
+                <div class="text">
+                 <div class=" " >
+                    <h5 class="mt-0 font-weight-bold mb-2">{{p.pname}}</h5>
+                    <p class="font-italic text-muted mb-0 small">{{p.pdes}}</p>
+                    <div class="d-flex align-items-center justify-content-between mt-1">
+                        <h6 class="font-weight-bold my-2">₹{{p.prate}}</h6>
+                        <button type="button" class="btn btn-primary" (click)="show(p)">Buy Now!</button>
+                    </div>
+                </div> 
+                </div>
+                <div class="prod_img " >
+                    <img src={{p.purl}}  alt="Generic placeholder image" width="200" class="">
+                </div>
+            </div>  -->
+        </div>
+        </div>
+        </div>
+    </div>
     </div>
     
     </body>

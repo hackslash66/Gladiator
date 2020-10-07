@@ -13,6 +13,9 @@ overflow-y: hidden;
    padding-bottom: 80px;
    margin-bottom: 50px;
  }
+.mb-2{
+   margin-left: 100px;
+}
 .main{
    background-color:  rgb(255, 255, 255);
    width: 80%;
@@ -36,19 +39,14 @@ body{
 .card{
    width:300px;
    height:300px;
-
+   
    box-shadow: 0 0 5px 0 #e9e8ca;
-      padding:2%;
-}
-.prod{
-   margin-left: 80px;
 }
 .carousel-inner img{
    width: 250px;
    height: 250px;
    position: absolute;
    margin-top: 5%;
-   margin-left: 5%;
 }
 
 a {
@@ -58,7 +56,6 @@ a {
    font-size: 6em;
    background:rgb(0,0,0);
    width: 80px;
-   padding: 20px;
    text-align: center;
    z-index: 1;
    
@@ -79,13 +76,13 @@ a {
  }
  .deal{
 
-   height:700px;
+   height:1000px;
    padding-bottom: 800px;
  }
  .lappy{
    width:40%;
     height:600px;
-    margin-top: -5%;
+    margin-top: -15%;
     margin-right: 3%;
     float: right;
  }
@@ -100,11 +97,12 @@ a {
    width:40%;
    height:600px;
    float: left;
-   margin-left: 10%;
+   margin-left: 5%;
+   margin-top: 0%;
  }
 .deal-left h6{
    font-size: 50px;
-   margin-top: -3%;
+   margin-top: -2%;
    
    color: rgba(47, 21, 0, 0.561);
 }
@@ -112,7 +110,8 @@ a {
 .deal-left p{
    font-size: 20px;
    margin-top:15%;
-   margin-left: -10%;
+   margin-left: -10px;
+   width: 50%;
 }
  .menu-wrapper {
 	position: relative; // hide the scroll bar
@@ -162,3 +161,38 @@ a {
    color: #491b00;
 }
 
+ .image {
+   opacity: 1;
+   display: block;
+   width: 100%;
+   height: auto;
+   transition: .5s ease;
+   backface-visibility: hidden;
+ }
+ 
+ .middle {
+   transition: .5s ease;
+   opacity: 0;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   text-align: center;
+   width:300px;
+   height:300px;
+      background-color:  rgba(255, 234, 207, 0.562) ;
+
+ }
+ .hover{
+    margin: 135px;
+    margin-top: 150px;
+ }
+ 
+ .container:hover .middle {
+   opacity: 1;
+ }
+ .text {
+   background-color:  rgba(255, 207, 175, 0.808) ;
+   font-size: 16px;
+   padding: 16px 32px;
+   border-style: double;
+ }
