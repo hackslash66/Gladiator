@@ -38,7 +38,6 @@ export class OrderdetailsComponent implements OnInit {
     this.card.cardNo=this.login.account;
     this.service3.getCard(this.card).subscribe(data=>this.emidetails=data);
     this.service2.getOrders(this.trans).subscribe(data => this.list = data);
-   
   }
   
   myDate = new Date();
@@ -50,7 +49,7 @@ export class OrderdetailsComponent implements OnInit {
    this.jstoday = formatDate(this.myDate, 'dd-MM-yyyy', 'en-US', '+0530');
    this.ord.recentdate=this.jstoday;
    if(this.ord.emiDuration-this.ord.monthsLeft == 1){
-    this.transaction.transactionDate=this.jstoday;
+    this.transaction.transactionDate=this.ord.orderDate;
     this.transaction.orderID=this.ord.orderID;
     this.transaction.amountPaid= Math.round(this.ord.product.prate/this.ord.emiDuration);
     this.service2.buynow(this.transaction);
