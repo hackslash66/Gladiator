@@ -8,6 +8,7 @@ import { Register } from '../register.model';
 import { Emicard } from '../emicard.model';
 import { EmicardService } from '../services/emicard.service';
 import { ProductlistService } from '../services/productlist.service';
+import { Transaction } from '../transaction.model';
 
 @Component({
   selector: 'app-productinfo',
@@ -18,6 +19,7 @@ export class ProductinfoComponent implements OnInit {
 
   p:Product;
   login:Register;
+ 
   card= new Emicard;
   ord= new Order;
   emi:number[];
