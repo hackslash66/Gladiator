@@ -22,6 +22,7 @@ import { EditComponent } from './edit/edit.component';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { DashboardnavbarComponent } from './dashboardnavbar.component';
 import { EditforuserComponent } from './editforuser/editforuser.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { EditforuserComponent } from './editforuser/editforuser.component';
     EditComponent,
     OrderdetailsComponent,
     DashboardnavbarComponent,
-    EditforuserComponent
+    EditforuserComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,

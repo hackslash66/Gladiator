@@ -1,5 +1,6 @@
+<body>
 <app-dashboardnavbar></app-dashboardnavbar>
-<div class="orderdiv">
+<div class="orderdiv" id="maindiv">
     <h2>Order Details !!</h2>
 <p>{{ord.product.pname}}</p>
 <img src={{ord.product.purl}} width="350" height="300">
@@ -8,7 +9,7 @@
 <p>Amount Paid: &nbsp;{{ord.amountPaid}}</p>
 <p>Due Amount: &nbsp;{{ord.dueAmount}}</p>
 <button class="btn btn-primary" (click)="paynow()">Pay Monthly EMI!!</button>
-</div>
+
 <div class="transactions division">
     <h1 class="transtableheading">Recent transactions</h1>
     <table class="table table-dark table-striped srk">
@@ -25,4 +26,7 @@
              
         </tr>
     </table>
+    <input type="button" value="Download PDF" onclick="window.print()"/>
 </div>
+</div>
+</body>

@@ -8,7 +8,8 @@ import { DashboardService } from '../services/dashboard.service';
 import { Router } from '@angular/router';
 import { Emicard } from '../emicard.model';
 import { EmicardService } from '../services/emicard.service';
-
+import {jsPDF} from 'jspdf';
+import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-orderdetails',
   templateUrl: './orderdetails.component.html',
@@ -82,4 +83,21 @@ export class OrderdetailsComponent implements OnInit {
    }
   }
 
+  // captureScreen(){
+  //   var data=document.getElementById('maindiv');
+  //   html2canvas(data).then(canvas=>{
+  //    var imgWidth=208;
+  //    var pageHeight=295;
+  //    var imgHeight=canvas.height*imgWidth/canvas.width;
+  //    var height=canvas.height*imgWidth/canvas.width;
+  //    const contentDataURL=canvas.toDataURL('image/png')
+  //    let pdf=new jsPDF('p','mm','a4');
+  //    var position=0;
+  //    pdf.addImage(contentDataURL,'PNG',0,position,imgWidth,imgHeight);
+  //    pdf.save('invoice.pdf');
+
+  //   });
+  // }
+
+ 
 }
