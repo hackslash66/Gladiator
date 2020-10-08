@@ -25,6 +25,7 @@ import { EditforuserComponent } from './editforuser/editforuser.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { AcceptedusersComponent } from './acceptedusers/acceptedusers.component';
+import { AdminnavbarComponent } from './adminnavbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { AcceptedusersComponent } from './acceptedusers/acceptedusers.component'
     EditforuserComponent,
     ForgotpasswordComponent,
     ChangepasswordComponent,
-    AcceptedusersComponent
+    AcceptedusersComponent,
+    AdminnavbarComponent
   ],
   imports: [
     BrowserModule,
