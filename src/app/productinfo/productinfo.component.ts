@@ -55,8 +55,8 @@ export class ProductinfoComponent implements OnInit {
 
     console.log(this.ord.amountPaid);
     console.log(this.ord);
-    if(this.emidetails.balance-this.ord.amountPaid > 0){
-    this.emidetails.balance=this.emidetails.balance-this.ord.amountPaid;
+    if(this.emidetails.balance-this.ord.amountPaid-5 > 0){
+    this.emidetails.balance=this.emidetails.balance-this.ord.amountPaid-5;
     this.service2.updatecard(this.emidetails);
 
     this.service.buynow(this.ord);

@@ -29,7 +29,7 @@
                           <div class="form-group" >
                             <label for="code" style="opacity: 1.0;" ><b>Name</b></label>
                             <input class='form-control' name="name" [(ngModel)]='register.name'
-                            required pattern="[A-Z][a-z]{3,}" placeholder="name" #name='ngModel' >
+                            required pattern="^[A-z]*$|^[A-z]+\s[A-z]*$" placeholder="name" #name='ngModel' >
                             <span *ngIf="name.touched && name.invalid" class="alert-danger">
                                 Name is invalid!
                             </span>

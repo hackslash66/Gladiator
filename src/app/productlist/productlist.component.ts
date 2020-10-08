@@ -9,7 +9,7 @@ import {ProductlistService} from '../services/productlist.service';
   styleUrls: ['./productlist.component.scss']
 })
 export class ProductlistComponent implements OnInit {
-  math=Math
+  math:Math;
   list:Product[]=[];
   constructor(private router:Router, private service: ProductlistService) { }
 

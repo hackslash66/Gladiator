@@ -39,12 +39,17 @@
 
 
 
+
+
+
+
+
 .vertical-menu {
   width: 13%;
   padding-right: 10px;
   margin-left: 18%;
   float: left;
-  
+
   /* Set a width if you like */
 }
 
@@ -59,7 +64,7 @@
   background-image: linear-gradient(to left,  #e7d5a5, #e6d1bfb7);
   background-color:hsla(44, 40%, 41%, 0.5);
   color: black;
- 
+
 }
 
 .vertical-menu a:hover {
@@ -80,6 +85,7 @@
   background-image: linear-gradient(to left,  #e7c5a5, #e7bd98b7);
   background-color:hsla(45, 62%, 35%, 0.603); /* Dark grey background on mouse-over */
   color: rgba(0, 0, 0, 0.89); ;
+  
 }
 
 

@@ -1,11 +1,10 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Emicard } from '../emicard.model';
 import {Register} from '../register.model';
 import { AdmintableService } from '../services/admintable.service';
 import { EmicardService } from '../services/emicard.service';
-import { DatePipe, formatDate } from '@angular/common';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -21,8 +20,8 @@ export class RegisterComponent implements OnInit {
  jexpiry=''
    constructor(private router:Router,private service: AdmintableService,private service2: EmicardService) { 
     this.banks=['HDFC','Kotak','ICICI','SBI'];
-    this.jstoday = formatDate(this.myDate, 'MM-yyyy', 'en-US', '+0530');
-    this.jexpiry = formatDate(this.exDate, 'MM-yyyy', 'en-US', '+0530' )
+    this.jstoday = formatDate(this.myDate, 'MM/yy', 'en-US', '+0530');
+    this.jexpiry = formatDate(this.exDate, 'MM/yy', 'en-US', '+0530' )
     console.log(this.jstoday);
     console.log(this.jexpiry);
    }
@@ -34,7 +33,7 @@ savePerson(){
   this.card.user=this.register;
   this.card.issueDate=this.jstoday;
   this.card.expiryDate=this.jexpiry;
-  if(this.register.card=="Gold"){
+  if(this.register.card=="gold"){
     this.card.balance=200000;
   }
   else{

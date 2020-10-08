@@ -22,13 +22,14 @@
     <div class="bcgd panel panel-default">
         <div class="vertical-menu " >
             <a href="#" class="active">Account</a>
-            <a routerLink="/editforuser">Edit Profile</a>
-           </div>
+            <a  (click)=editEmp()>Edit Profile</a>
+            <a routerLink="/changepassword">Change Password</a>
+          </div>
         
           <div class="dashboard">
         <div  class="center-container center-border" >
-            <div class="card division">
-                <table>
+            <!-- <div class="card division"> -->
+                <!-- <table>
                     <tr>
                         <td>Card Number:</td>
                         <td class="values">{{login.account}}</td>
@@ -46,34 +47,87 @@
                         <td class="values">{{emidetails.expiryDate}}</td>
                     </tr>
                 </table>
-                <div class="activated">ACTIVATED</div>
+                <div class="activated">ACTIVATED</div> -->
+                <!-- <h1 class="title">Hover Me!</h1> -->
+
+
+<div class="card">
+  <div class="card__front card__part">
+    <img class="card__front-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
+    <!-- <img class="card__front-logo card__logo" src="https://www.fireeye.com/partners/strategic-technology-partners/visa-fireeye-cyber-watch-program/_jcr_content/content-par/grid_20_80_full/grid-20-left/image.img.png/1505254557388.png"> -->
+    <p class="card__front-logo card__logo">{{login.card}}</p>
+    <p class="card_numer">{{login.account}}</p>
+    <div class="card__space-75">
+      <span class="card__label">Card holder</span>
+      <p class="card__info">{{login.uname}}</p>
+    </div>
+    <div class="card__space-25">
+      <span class="card__label">Expires</span>
+            <p class="card__info">{{emidetails.expiryDate}}</p>
+    </div>
+  </div>
+  
+  <div class="card__back card__part">
+    <div class="card__black-line"></div>
+    <div class="card__back-content">
+      <div class="card__secret">
+        <p class="card__secret--last">420</p>
+      </div>
+      <img class="card__back-square card__square" src="https://image.ibb.co/cZeFjx/little_square.png">
+      <img class="card__back-logo card__logo" src="assets/images/pazar3.png">
+      
+    </div>
+  </div>
+  
+<!-- </div> -->
             </div>
     
             <div class="credit_info division">
                 <div class="header" >Credit details</div>
                 <div class="c_details">
-                <p>Total : ₹{{allocated}}</p>
-            <p> Card Type : {{login.card}}</p>
-            <p> Remaining Credit : ₹{{emidetails.balance}}</p>
+                <p>TOTAL : &#8377;{{allocated.toLocaleString('en-IN')}}</p>
+            <p> CARD TYPE: <b>{{login.card}}</b></p>
+            <p> REMAINING BALANCE: &#8377;<b>{{emidetails.balance.toLocaleString('en-IN')}}</b></p>
         </div>
             </div>
     
-           
+            <!-- <div class="division">
+                <div class="header" >Products purchased</div>
+            
+            <div class="products_list">
+                <table>
+                    <tr >
+                        <td>Product Name:</td><td class="values">Iphone</td>
+                        <td >Amount:</td><td class="values">70,000</td>
+                    </tr>
+                    <tr>
+                        <td>Paid:</td><td class="values">15,000</td>
+                    </tr>
+                    <tr>
+                        <td>Balance:</td><td class="values">55,000</td>
+                    </tr>
+                </table>
+            </div>
+        </div> -->
             <div class="transactions division">
                 <div class="header" >Recent transactions</div>
-                <table class="table table-dark table-striped trans_table" style="margin-left: 0px;">
+                <table class="table" style="margin-left: 0px;">
+                    <thead class="thead-dark">
                     <tr>
                         <th>Product</th>
                         <th>Date</th>
                         <th>Amount Paid</th>
                         <th>Extra details</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr *ngFor="let ord of list; let i=index" class="rows">
                          <td>{{ord.product.pname}}</td>
                          <td>{{ord.orderDate}}</td>
-                         <td>₹{{ord.amountPaid}}</td>
+                         <td>&#8377;{{ord.amountPaid.toLocaleString('en-IN')}}</td>
                          <td><button class="btn btn-primary" (click)="show(ord)">More details</button></td>
                     </tr>
+                </tbody>
                 </table>
             </div>
         </div>

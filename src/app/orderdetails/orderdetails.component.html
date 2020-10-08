@@ -6,8 +6,8 @@
 <img src={{ord.product.purl}} width="350" height="300">
 <p>Order date:&nbsp;{{ord.orderDate}}</p>
 <p>Months Left: &nbsp;{{ord.monthsLeft}}</p>
-<p>Amount Paid: &nbsp;{{ord.amountPaid}}</p>
-<p>Due Amount: &nbsp;{{ord.dueAmount}}</p>
+<p>Amount Paid: &nbsp;&#8377;{{ord.amountPaid.toLocaleString('en-IN')}}</p>
+<p>Due Amount: &nbsp;&#8377;{{ord.dueAmount.toLocaleString('en-IN')}}</p>
 <button class="btn btn-primary" (click)="paynow()">Pay Monthly EMI!!</button>
 
 <div class="transactions division">
@@ -22,7 +22,7 @@
         <tr *ngFor="let ord of list; let i=index">
              <td>{{ord.orderID}}</td>
              <td>{{ord.transactionDate}}</td>
-             <td>{{ord.amountPaid}}</td>
+             <td>&#8377;{{ord.amountPaid.toLocaleString('en-IN')}}</td>
              
         </tr>
     </table>

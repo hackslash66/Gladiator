@@ -30,9 +30,9 @@
             <!-- Custom content-->
             <div class="wrapper">
                 <div class="container">
-                   <img src={{p.purl}}  width=" 90%"height="80%"> 
+                   <img src={{p.purl}}  width="350px" height="350px" style="padding-top:50px ; padding-bottom: 50px;height: 450px;"> 
                   <!-- <div class="top" [style.background]="'url('+p.purl+')'" style=" background-size: 10px 10px;" ></div> -->
-                  <div class="bottom">
+                  <div class="bottom" style="margin-top: 30px;">
                     <div class="left">
                       <div class="details">
                         <h5>{{p.pname}}</h5>
@@ -55,7 +55,7 @@
                     <div class="info">
                   <div class="contents" style="color: rgb(0, 0, 0);">
                     <h5>{{p.pdes}} </h5>
-                    <h4 style="margin-top: 20px;">EMI starts at  ₹{{math.round(p.prate/9)}} pm </h4>
+                    <!-- <h4 style="margin-top: 20px;">EMI starts at {{math.round(p.prate/9)}} pm </h4> -->
                 </div>
                 </div>
                 </div>

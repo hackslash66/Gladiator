@@ -1,264 +1,210 @@
 
 <head>
-<script>
-
-
-</script>
-
-</head>
-
-<body>
-  <app-indexnavbar></app-indexnavbar>
-  <div class="main">
-    
-      <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="assets/images/slide1.jpg" alt="First slide" 
-          height="400">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="assets/images/slide2.jpg" alt="Second slide"
-          height="400">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="assets/images/slide3.jpg" alt="Third slide"
-          height="400">
-        </mdb-carousel-item>
-      </mdb-carousel>
-     
+  <script>
+  
+  
+  </script>
+  
+  </head>
+  
+  <body>
+    <app-indexnavbar></app-indexnavbar>
+    <div class="main">
       
-     <!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item ssh" data-ride="carousel">
-  <h3 style="text-align: center; ">Our Products</h3>
-  <!--Controls-->
-  <div class="controls-top">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next"></a>
+        <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+          <mdb-carousel-item>
+            <img class="d-block w-100" src="assets/images/slide1.jpg" alt="First slide" 
+            height="400">
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img class="d-block w-100" src="assets/images/slide2.jpg" alt="Second slide"
+            height="400">
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img class="d-block w-100" src="assets/images/slide3.jpg" alt="Third slide"
+            height="400">
+          </mdb-carousel-item>
+        </mdb-carousel>
+       
+        
+       <!--Carousel Wrapper-->
+  <div id="multi-item-example" class="carousel slide carousel-multi-item ssh" data-ride="carousel">
+    <h3 style="text-align: center; ">Our Products</h3>
+    <!--Controls-->
+    <div class="controls-top">
+      <a class="btn-floating" href="#multi-item-example" data-slide="prev"><span aria-hidden="true" class="carousel-control-prev-icon"></span></a>
+      <a class="btn-floating" href="#multi-item-example" data-slide="next"><span aria-hidden="true" class="carousel-control-next-icon"></span></a>
+    </div>
+    <!--/.Controls-->
+  
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+      <li data-target="#multi-item-example" data-slide-to="1"></li>
+      <li data-target="#multi-item-example" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+  
+    <!--Slides-->
+    <div class="menu">
+    <div class="carousel-inner wrapper menu-wrapper" role="listbox">
+  
+      <!--First slide-->
+      <section class="carousel-item active prod" style="margin-left: 10px">
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/51XTPff2ayL._SL1000_.jpg"
+              alt="Card image cap"  >
+           
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/71Rm99TpS9L._SL1500_.jpg"
+              alt="Card image cap" >
+            <!-- <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                Apple iPad (10.2-inch, Wi-Fi, 32GB) - Silver (7th Generation)</p>
+              <a class="btn btn-primary">Button</a>
+            </div> -->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/815a%2BXjrgvL._SL1500_.jpg"
+              alt="Card image cap"  >
+            <!-- <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                New Apple iPad Pro (11-inch, Wi-Fi, 128GB) - Silver (2nd Generation).</p>
+              <a class="btn btn-primary">Button</a>
+            </div> -->
+          </div>
+        </div>
+  
+      
+      </section>
+      <!--/.First slide-->
+  
+      <!--Second slide-->
+      <section id="section2" class="carousel-item prod"  style="margin-left: 0;">
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/61s7sJEpsVL._SX569_.jpg" 
+              alt="Card image cap">
+            <!-- <div class="card-body">
+              <h4 class="card-title">Lenovo i3</h4>
+              <p class="card-text">Lenovo Ideapad Slim 3i 10th Gen Intel Core i3 14 inch FHD Thin and Light
+                
+                 Laptop (4GB/256GB/Windows 10/MS Office/Grey/1.6Kg), 81WD0044IN</p>
+              <a class="btn btn-primary">Button</a>
+            </div> -->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/81TRaQLC%2BjL._SL1500_.jpg"  alt="Card image cap">
+            <!-- <div class="card-body">
+              <h4 class="card-title">ASUS 14</h4>
+              <p class="card-text">ASUS VivoBook 14 Intel Core i3-1005G1 10th Gen 14-inch FHD Compact and Light
+                 Laptop (4GB RAM/256GB NVMe SSD/Windows 10/MS Office 2019/Integrated.</p>
+              <a class="btn btn-primary">Button</a> 
+            </div>-->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/61PZyfceGZL._SL1500_.jpg" alt="Card image cap">
+            <!-- <div class="card-body">
+              <h4 class="card-title">ASUS K14</h4>
+              <p class="card-text">
+                ASUS VivoBook Ultra K14 Intel Core i3-10110U 10th Gen 14-inch FHD Thin and Light Laptop
+                 (4GB RAM/512GB NVMe SSD/Windows 10/Integrated Graphics</p>
+              <a class="btn btn-primary">Button</a>
+            </div> -->
+          </div>
+        </div>
+  
+      </section>
+      <!--/.Second slide-->
+  
+      <!--Third slide-->
+      <section class="carousel-item prod"  style="margin-left: 0;">
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/71eGmXuaGgL._SL1500_.jpg"  alt="Card image cap">
+             <!-- <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                Philips Performance TAPN505BK Bluetooth 5.0 Active Noise Cancelling in-Ear Neckband with Google Assistant, 
+                Hi-Res Audio, Quick Charge and Built-in Mic </p>
+              <a class="btn btn-primary">Button</a> 
+            </div> -->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://m.media-amazon.com/images/I/61N1qHNeeSL._AC_UY218_.jpg"alt="Card image cap">
+            <!--  <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                HBS 730 Wireless Bluetooth Neckband in-Ear Headphone Stereo Headset
+                 with Vibration Alert for All Smartphones - Black</p>
+              <a class="btn btn-primary">Button</a> 
+            </div> -->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-2">
+            <img class="card-img-top"
+              src="https://images-na.ssl-images-amazon.com/images/I/61ku39qVEzL._SL1500_.jpg" alt="Card image cap">
+            <!-- <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                boAt Rockerz 255 Sports Wireless Headset with Super Extra Bass, IPX5 Water & Sweat Resistance, 
+                Qualcomm Chipset and Up to 6H Playback (Active Black)</p>
+              <a class="btn btn-primary">Button</a>
+            </div> -->
+          </div>
+        </div>
+  
+      </section>
+      <!--/.Third slide-->
+  
+    </div>
   </div>
-  <!--/.Controls-->
-
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-    <li data-target="#multi-item-example" data-slide-to="1"></li>
-    <li data-target="#multi-item-example" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-
-  <!--Slides-->
-  <div class="menu" >
-  <div class="carousel-inner wrapper menu-wrapper" role="listbox" width="500px">
-
-    <!--First slide-->
-    <section class="carousel-item active prod"  >
-
-      <div class="col-md-4"  >
-        <div class="card mb-2 container" >
-          <div class="image">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/51XTPff2ayL._SL1000_.jpg"
-            alt="Card image cap"  >
-          </div>
-            <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2 container" >
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/71Rm99TpS9L._SL1500_.jpg"
-            alt="Card image cap" >
-          <!-- <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              Apple iPad (10.2-inch, Wi-Fi, 32GB) - Silver (7th Generation)</p>
-            <a class="btn btn-primary">Button</a>
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2">
-          <img class="card-img-top container"
-            src="https://images-na.ssl-images-amazon.com/images/I/815a%2BXjrgvL._SL1500_.jpg"
-            alt="Card image cap"  >
-          <!-- <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              New Apple iPad Pro (11-inch, Wi-Fi, 128GB) - Silver (2nd Generation).</p>
-            <a class="btn btn-primary">Button</a>
-          </div> -->
-          <div class="hover">
-            <div class="middle">
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    
-    </section>
-    <!--/.First slide-->
-
-    <!--Second slide-->
-    <section id="section2" class="carousel-item prod"  >
-
-      <div class="col-md-4" >
-        <div class="card mb-2 container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/61s7sJEpsVL._SX569_.jpg" 
-            alt="Card image cap">
-          <!-- <div class="card-body">
-            <h4 class="card-title">Lenovo i3</h4>
-            <p class="card-text">Lenovo Ideapad Slim 3i 10th Gen Intel Core i3 14 inch FHD Thin and Light
-              
-               Laptop (4GB/256GB/Windows 10/MS Office/Grey/1.6Kg), 81WD0044IN</p>
-            <a class="btn btn-primary">Button</a>
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2 container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/81TRaQLC%2BjL._SL1500_.jpg"  alt="Card image cap">
-          <!-- <div class="card-body">
-            <h4 class="card-title">ASUS 14</h4>
-            <p class="card-text">ASUS VivoBook 14 Intel Core i3-1005G1 10th Gen 14-inch FHD Compact and Light
-               Laptop (4GB RAM/256GB NVMe SSD/Windows 10/MS Office 2019/Integrated.</p>
-            <a class="btn btn-primary">Button</a> 
-          </div>-->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2 container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/61PZyfceGZL._SL1500_.jpg" alt="Card image cap">
-          <!-- <div class="card-body">
-            <h4 class="card-title">ASUS K14</h4>
-            <p class="card-text">
-              ASUS VivoBook Ultra K14 Intel Core i3-10110U 10th Gen 14-inch FHD Thin and Light Laptop
-               (4GB RAM/512GB NVMe SSD/Windows 10/Integrated Graphics</p>
-            <a class="btn btn-primary">Button</a>
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!--/.Second slide-->
-
-    <!--Third slide-->
-    <section class="carousel-item prod" >
-
-      <div class="col-md-4" style="margin-right: 10px;">
-        <div class="card mb-2  container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/71eGmXuaGgL._SL1500_.jpg"  alt="Card image cap">
-           <!-- <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              Philips Performance TAPN505BK Bluetooth 5.0 Active Noise Cancelling in-Ear Neckband with Google Assistant, 
-              Hi-Res Audio, Quick Charge and Built-in Mic </p>
-            <a class="btn btn-primary">Button</a> 
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2 container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/61QIXlTgqFL._SL1463_.jpg"alt="Card image cap">
-          <!--  <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              HBS 730 Wireless Bluetooth Neckband in-Ear Headphone Stereo Headset
-               with Vibration Alert for All Smartphones - Black</p>
-            <a class="btn btn-primary">Button</a> 
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card mb-2 container">
-          <img class="card-img-top"
-            src="https://images-na.ssl-images-amazon.com/images/I/61ku39qVEzL._SL1500_.jpg" alt="Card image cap">
-          <!-- <div class="card-body">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">
-              boAt Rockerz 255 Sports Wireless Headset with Super Extra Bass, IPX5 Water & Sweat Resistance, 
-              Qualcomm Chipset and Up to 6H Playback (Active Black)</p>
-            <a class="btn btn-primary">Button</a>
-          </div> -->
-          <div class="hover">
-            <div class="middle" >
-              <h5 style="margin-top: 80px;">To buy this product please:</h5>
-              <button class="text" style="opacity: 1;" routerLink="/login">Login/Register</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!--/.Third slide-->
-
+    <!--/.Slides-->
+  
   </div>
-</div>
-  <!--/.Slides-->
-
-</div>
-<!--/.Carousel Wrapper-->
-<div class="deal" id="last">
-  <h3 style=" text-align: center; margin-bottom: 100px;">Deal of the day</h3>
-  <div class="large-title-left purple" data-ix="title-load" style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 200ms ease 0s, transform 500ms ease 0s;">Hot deals</div>
-  <div class="deal-left image"><h6>On top laptop brands</h6>
-    <p>Great deals!!! new offers everyday on electronics  . Choose from a range of laptops and check out deal of the day to find perfect offer for you!</p>
+  <!--/.Carousel Wrapper-->
+  <div class="deal" id="last">
+    <h3 style=" text-align: center; margin-bottom: 100px;">Deal of the day</h3>
+    <!-- <div class="large-title-left purple" data-ix="title-load" style="opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 200ms ease 0s, transform 500ms ease 0s;">Hot deals</div> -->
+    <div class="deal-left"><h6>On top laptop brands</h6>
+      <p>Great deals!!! new offers everyday on electronics  . Choose from a range of laptops and check out deal of the day to find perfect offer for you!</p>
+    </div>
+   
+    <img class="lappy" src="/assets/images/lappy.png" >
   </div>
- 
-  <img class="lappy" src="/assets/images/lappy.png" >
-</div>
-
-</div>
-</body>
+  
+  </div>
+  </body>
+  

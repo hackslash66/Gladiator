@@ -29,7 +29,7 @@
                           <div class="form-group" >
                             <label for="code" style="opacity: 1.0;" ><b>Name</b></label>
                             <input class='form-control' name="name" [(ngModel)]='register.name'
-                            required pattern="[A-Z][a-z]{3,}" placeholder="name" #name='ngModel' >
+                            required pattern="^[A-z]*$|^[A-z]+\s[A-z]*$" placeholder="name" #name='ngModel' >
                             <span *ngIf="name.touched && name.invalid" class="alert-danger">
                                 Name is invalid!
                             </span>
@@ -88,8 +88,8 @@
                         <div class="form-group">
                             <label for="card"><b>Card Type</b></label>
                             <div class="form-control" >
-                                <label class="radio-inline"><input type="radio" value="Gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
-                                <label class="radio-inline"><input type="radio" value="Titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
+                                <label class="radio-inline"><input type="radio" value="gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
+                                <label class="radio-inline"><input type="radio" value="titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
                             </div>
                             <span *ngIf="card.touched && card.invalid" class="alert-danger">
                                 Card is invalid!

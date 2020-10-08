@@ -8,6 +8,8 @@ import { DashboardService } from '../services/dashboard.service';
 import { Router } from '@angular/router';
 import { Emicard } from '../emicard.model';
 import { EmicardService } from '../services/emicard.service';
+// import {jsPDF} from 'jspdf';
+// import html2canvas from 'html2canvas';
 @Component({
   selector: 'app-orderdetails',
   templateUrl: './orderdetails.component.html',
