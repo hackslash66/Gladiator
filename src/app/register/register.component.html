@@ -88,8 +88,8 @@
                         <div class="form-group">
                             <label for="card"><b>Card Type</b></label>
                             <div class="form-control" >
-                                <label class="radio-inline"><input type="radio" value="gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
-                                <label class="radio-inline"><input type="radio" value="titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
+                                <label class="radio-inline"><input type="radio" value="Gold" name="card" required [(ngModel)]='register.card' #card='ngModel' checked>Gold</label>&nbsp;&nbsp;
+                                <label class="radio-inline"><input type="radio" value="Titanium" name="card" required [(ngModel)]='register.card' #card='ngModel'>Titanium</label>
                             </div>
                             <span *ngIf="card.touched && card.invalid" class="alert-danger">
                                 Card is invalid!
